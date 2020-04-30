@@ -116,6 +116,11 @@
         <button type="submit" class="btn btn-info micro-form-btn">Pre-Register Now</button>
       </form>
     </div>
+    <ul class="mob-action nav nav-fill d-sm-block d-md-none d-lg-none">
+      <li class="nav-item">Call</li>
+      <li class="nav-item">Enquire</li>
+      <li class="nav-item">WhatsApp</li>
+    </ul>
 
     <!-- Required JS -->
     <?php loadJS("https://code.jquery.com/jquery-3.4.1.slim.min.js", "./assets/js/jquery.js"); ?>
