@@ -1,0 +1,247 @@
+.ami-block{
+  display: inline-block;
+  position: relative;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 1px 1px 25px #e0e0e0;
+}
+.ami-container{
+  display: block;
+  text-align: center
+}
+.ami-title{
+  display: block;
+  font-weight: 600;
+}
+.ami-block::before, .ami-block::after{
+  content:"";
+  width: 0;
+  height: 2px;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: var(--colorPrimary);
+}
+
+.ami-container::before, .ami-container::after{
+  content:"";
+  width:2px;
+  height:0;
+  position: absolute;
+  transition: all 0.2s linear;
+  background: var(--colorPrimary);
+}
+.ami-block:hover::before, .ami-block:hover::after{
+  width: 100%;
+}
+.ami-block:hover .ami-container::before, .ami-block:hover .ami-container::after{
+  height: 100%;
+}
+/*----- Aminity Effect 1 -----*/
+.ami-1::before, .ami-1::after{
+  transition-delay: 0.2s;
+}
+.ami-1 .ami-container::before, .ami-1 .ami-container::after{
+  transition-delay: 0s;
+}
+.ami-1::before{
+  right: 0;
+  top: 0;
+}
+.ami-1::after{
+  left: 0;
+  bottom: 0;
+}
+.ami-1 .ami-container::before{
+  left: 0;
+  top: 0;
+}
+.ami-1 .ami-container::after{
+  right: 0;
+  bottom: 0;
+}
+.ami-1:hover::before, .ami-1:hover::after{
+  transition-delay: 0s;
+}
+.ami-1:hover .ami-container::before, .ami-1:hover .ami-container::after{
+  transition-delay: 0.2s;
+}
+
+/*--- Aminity Effect 2 -------*/
+
+
+.ami-2::before, .ami-2::after{
+  transition-delay: 0s;
+}
+.ami-2 .ami-container::before, .ami-2 .ami-container::after{
+  transition-delay: 0.2s;
+}
+.ami-2::before{
+  right: 0;
+  top: 0;
+}
+.ami-2::after{
+  left: 0;
+  bottom: 0;
+}
+.ami-2 .ami-container::before{
+  left: 0;
+  top: 0;
+}
+.ami-2 .ami-container::after{
+  right: 0;
+  bottom: 0;
+}
+.ami-2:hover::before, .ami-2:hover::after{
+  transition-delay: 0.2s;
+}
+.ami-2:hover .ami-container::before, .ami-2:hover .ami-container::after{
+  transition-delay: 0s;
+}
+
+
+/*----- Aminity Effect 3 -----*/
+.ami-3::after{
+  left: 0;
+  bottom: 0;
+  transition-delay: 0.6s;
+}
+.ami-3 .ami-container::after{
+  transition-delay: 0.4s;
+  right: 0;
+  bottom: 0
+}
+.ami-3::before{
+  right: 0;
+  top: 0;
+  transition-delay: 0.2s;
+}
+.ami-3 .ami-container::before{
+  transition-delay: 0s;
+  left: 0;
+  top: 0;
+}
+
+.ami-3:hover::after{
+  transition-delay: 0s;
+}
+.ami-3:hover .ami-container::after{
+  transition-delay: 0.2s;
+}
+.ami-3:hover::before{
+  transition-delay: 0.4s;
+}
+.ami-3:hover .ami-container::before{
+  transition-delay: 0.6s;
+}
+
+/*----- Aminity Effect 4 -----*/
+.ami-4::after{
+  right:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.ami-4 .ami-container::after{
+  right:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.ami-4::before{
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.ami-4 .ami-container::before{
+  left: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+
+/*----- Aminity Effect 5 -----*/
+.ami-5::after{
+  left:0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.ami-5 .ami-container::after{
+  right:0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.ami-5::before{
+  right: 0;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.ami-5 .ami-container::before{
+  left: 0;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+
+/*----- Aminity Effect 6 -----*/
+.ami-6::before{
+  left: 50%;
+  top: 0;
+  transition-duration: 0.4s;
+}
+.ami-6::after{
+  left: 50%;
+  bottom: 0;
+  transition-duration: 0.4s;
+}
+.ami-6 .ami-container::before{
+  left: 0;
+  top: 50%;
+  transition-duration: 0.4s;
+}
+.ami-6 .ami-container::after{
+  right: 0;
+  top: 50%;
+  transition-duration: 0.4s;
+}
+.ami-6:hover::before, .ami-6:hover::after{
+  left: 0;
+}
+.ami-6:hover .ami-container::before, .ami-6:hover .ami-container::after{
+  top: 0;
+}
+
+@media only screen and (min-width: 991px) {
+  .ami-block{
+    margin: .8vw 1vw;
+    width: 100%;
+  }
+  .ami-container{
+    padding: 1.2vw .8vw .8vw;
+  }
+  .ami-img{
+    height: 6vw !important;
+    display: inline-block;
+    margin: 0 auto .8vw;
+  }
+  .ami-title{
+    font-size: 1.1vw;
+  }
+  
+}
+
+@media only screen and (max-width: 991px) {
+  .ami-block{
+    margin: 10px 10%;
+    width: 80%;
+  }
+  .ami-container{
+    padding: 10px;
+  }
+  .ami-img{
+    height: 100px !important;
+    width: auto !important;
+    display: inline-block;
+    margin: 0 auto 20px;
+  }
+  .ami-title{
+    font-size: 20px;
+  }
+}

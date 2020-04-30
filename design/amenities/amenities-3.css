@@ -1,0 +1,59 @@
+#ami-3.owl-carousel.owl-loaded{
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  color: #000;
+  /* background-image: url(https://www.thewadhwagroup.com/resources/images/projects-details/external-amenities-slider.jpg); */
+  background-size: cover;
+  border-radius: 2vw;
+}
+
+#ami-3 .item-wrp{
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10% 10px;
+}
+
+#ami-3 .item-wrp > div {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(200, 200, 200, 1);
+}
+
+#ami-3 .item-wrp > div:last-child {
+  border-bottom: none;
+}
+
+#ami-3 .item-wrp p {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+@media only screen and (min-width: 991px) {
+  #ami-3 .item-wrp img {
+    width: 5vw;
+    height: 4vw;
+    margin-right: 1vw;
+  }
+  #ami-3 .item-wrp p {
+    font-size: 1.05vw;
+  }
+  #ami-3 .item-wrp > div {
+    padding: 1vw 0;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  #ami-3 .item-wrp img {
+    width: 20%;
+    height: 20%;
+    margin-right: 5%;
+  }
+  #ami-3 .item-wrp p {
+    font-size: 14px;
+  }
+  #ami-3 .item-wrp > div {
+    padding: 10px 0;
+  }
+}
