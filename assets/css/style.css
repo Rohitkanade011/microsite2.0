@@ -554,10 +554,14 @@ body {
 
 @media only screen and (max-width: 991px) {
 	.navbar.micro-navbar{
-		padding: 0.1rem 0.5rem;
+		padding: 0.1rem 0;
 	}
-	.navbar-brand{
+	.navbar.micro-navbar .navbar-brand{
 		padding: 0;
+		margin-left: 0.5rem;
+	}
+	.navbar-toggler{
+		margin-right: 0.5rem;
 	}
 	.logo{
 		height: 60px;
@@ -575,6 +579,12 @@ body {
 	}
 	.micro-main-slider-img-full{
 		height: 92vh;
+	}
+	.navbar.micro-navbar .nav-fill .nav-item:first-child{
+		border-top: 1px solid #ededed;
+	}
+	.navbar.micro-navbar .nav-fill .nav-item:not(:last-child){
+		border-bottom: 1px solid #ededed;
 	}
 
 	.info-box{
