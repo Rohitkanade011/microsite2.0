@@ -37,3 +37,88 @@
     font-weight: normal;
     font-style: normal;
 }
+
+
+/* Micon 1.0 Font Icon */
+@font-face {
+  font-family: 'micon';
+  src:  url('micon.eot?h4lfa7');
+  src:  url('micon.eot?h4lfa7#iefix') format('embedded-opentype'),
+    url('micon.ttf?h4lfa7') format('truetype'),
+    url('micon.woff?h4lfa7') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.mi {
+  font-family: 'micon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mi-ami:before {
+  content: "\e905";
+}
+.mi-download:before {
+  content: "\e906";
+}
+.mi-gallery:before {
+  content: "\e907";
+}
+.mi-home:before {
+  content: "\e908";
+}
+.mi-location:before {
+  content: "\e909";
+}
+.mi-price:before {
+  content: "\e90a";
+}
+.mi-siteplan:before {
+  content: "\e90b";
+}
+.mi-sitevisit:before {
+  content: "\e90c";
+}
+.mi-rs:before {
+  content: "\e90d";
+}
+.mi-rs-light:before {
+  content: "\e90e";
+}
+.mi-support-call:before {
+  content: "\e90f";
+}
+.mi-support-price:before {
+  content: "\e910";
+}
+.mi-support-visit:before {
+  content: "\e911";
+}
+.mi-call:before {
+  content: "\e900";
+}
+.mi-enquire:before {
+  content: "\e901";
+}
+.mi-whatsapp .path1:before {
+  content: "\e902";
+  color: rgb(236, 239, 241);
+}
+.mi-whatsapp .path2:before {
+  content: "\e903";
+  margin-left: -1em;
+  color: rgb(76, 175, 80);
+}
+.mi-whatsapp .path3:before {
+  content: "\e904";
+  margin-left: -1em;
+  color: rgb(250, 250, 250);
+}

@@ -29,20 +29,20 @@
 
     <header class="micro-nav fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-white micro-navbar">
-          <a class="navbar-brand" href="#"><img src="http://shapoorjivicinia.com/assets/img/Vicinialogo.svg" class="logo"></a>
+          <a class="navbar-brand" href="#" onclick="return false"><img src="http://shapoorjivicinia.com/assets/img/Vicinialogo.svg" class="logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav nav-fill">
-              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#pricing">Price</a></li>
-              <li class="nav-item"><a class="nav-link" href="#sitefloorplan">Site &amp; Floor Plan</a></li>
-              <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
-              <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-              <li class="nav-item"><a class="nav-link" href="#location">Location</a></li>
-              <li class="nav-item"><a class="nav-link" href="#sitevisit">Virtual Site Tour</a></li>
-              <li class="nav-item"><a class="nav-link" href="#!">Brochure</a></li>
+              <li class="nav-item"><a class="nav-link" href="#home"><span class="mi mi-home nav-icon"></span><span class="d-sm-inline d-md-none"> Home</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#pricing"><span class="mi mi-price nav-icon"></span> Price</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sitefloorplan"><span class="mi mi-siteplan nav-icon"></span> Site &amp; Floor Plan</a></li>
+              <li class="nav-item"><a class="nav-link" href="#amenities"><span class="mi mi-ami nav-icon"></span> Amenities</a></li>
+              <li class="nav-item"><a class="nav-link" href="#gallery"><span class="mi mi-gallery nav-icon"></span> Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="#location"><span class="mi mi-location nav-icon"></span> Location</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sitevisit"><span class="mi mi-sitevisit nav-icon"></span> Virtual Site Tour</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" onclick="return false;" data-toggle="modal" data-target="#enqModal"><span class="mi mi-download nav-icon"></span> Brochure</a></li>
             </ul>
           </div>
         </nav>
@@ -97,10 +97,10 @@
         <div class="og-section pb-2">
           <ul class="nav nav-fill og-block">
             <li class="nav-item">Organize Site Visit</li>
-            <li class="nav-item">WPL 919166757310</li>
+            <li class="nav-item"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 919166757310</li>
           </ul>
           <p class="og-heading my-1 text-secondary">Or Request A</p>
-          <button class="btn btn-sm btn-info micro-form-btn-sm">Call Back Now</button>
+          <button class="btn btn-sm btn-info micro-form-btn-sm"><span class="mi mi-call action-icon"></span> Call Back Now</button>
         </div>
 
         <span class="d-block form-heading font-weight-bold my-2">Pre-Register here for Best Offers</span>
@@ -118,14 +118,60 @@
         </form>
       </div>
       <ul class="mob-action nav nav-fill d-sm-block d-md-none d-lg-none">
-        <li class="nav-item">Call</li>
-        <li class="nav-item">Enquire</li>
-        <li class="nav-item">WhatsApp</li>
+        <li class="nav-item"><span class="mi mi-call action-icon"></span> Call</li>
+        <li class="nav-item"><span class="mi mi-enquire action-icon"></span> Enquire</li>
+        <li class="nav-item"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> WhatsApp</li>
       </ul>
     </main>
     <footer class="disclaimer">
        <b>Disclaimer :</b> The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purpose only. This is not the official website. Website maintained by online marketing agency. We may share data with rera registered brokers/companies for further processing. We may also send updates to the mobile number/email id registered with us. All Rights Reserved.
     </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="enqModal" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered enq-modal" role="document">
+        <div class="modal-content">
+          <div class="modal-body text-center">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <!-- <div class="modal-head">
+              <span class="modal-title">Download Brochure</span>
+            </div> -->
+            <img src="http://shapoorjivicinia.com/assets/img/Vicinialogo.svg" class="modal-logo">
+            <span class="modal-title-secondary">Register here and Available the <span class="text-danger">Best Offers!!</span></span>
+            <form action="" method="POST" class="form-modal">
+              <div class="form-group">
+                <input type="text" pattern="[a-zA-Z ]+" class="form-control rounded-0 micro-form-field" required placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input type="text" pattern="[0-9]+" class="form-control rounded-0 micro-form-field" required placeholder="Mobile No">
+              </div>
+              <div class="form-group">
+                <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
+              </div>
+              <button type="submit" class="btn btn-info micro-form-btn">Pre-Register Now</button>
+            </form>
+            <span class="modal-highlight-title">&mdash; We Promise &mdash;</span>
+            <ul class="modal-highlight">
+              <li>
+                <i class="mi mi-support-call"></i>
+                <span>Instant Call Back</span>
+              </li>
+              <li>
+                <i class="mi mi-support-visit"></i>
+                <span>Free Site Visit</span>
+              </li>
+              <li>
+                <i class="mi mi-support-price"></i>
+                <span>Unmatched Price</span>
+              </li>
+            </ul>
+            <a href="tel:+919167757310" class="modal-call-btn"><i class="mi mi-call"></i> +91 9167757310</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Required JS -->
     <?php loadJS("https://code.jquery.com/jquery-3.4.1.slim.min.js", "./assets/js/jquery.js"); ?>

@@ -1,6 +1,6 @@
 :root {
   --colorPrimary: #58b3ea;
-  --colorBtn : #ffffff;
+  --colorBtn: #ffffff;
 }
 html {
 	scroll-behavior: smooth;
@@ -235,6 +235,10 @@ body {
   	.micro-nav{
 		width: 78%;
 	}
+	.micro-nav .nav-icon{
+		margin-right: 3px;
+		font-size: 1.25vw
+	}
 	.micro-nav .navbar-nav{
 		width: 100%;
 	}
@@ -257,7 +261,7 @@ body {
 		padding: 0;
 	}
 	.navbar.micro-navbar .nav-link{
-		padding: 1.1vw;
+		padding: 1.1vw 0.3vw;
 	}
 	.og-section{
 		background-image: -webkit-linear-gradient(top, #ffffff, #f1f1f1);
@@ -550,6 +554,84 @@ body {
 		font-size: .75vw;
 		letter-spacing: 0;
 	}
+	.modal-dialog.enq-modal{
+		max-width: 35vw;
+		border-radius: 3px;
+	}
+	.modal-logo{
+		margin-top: 1vw;
+		height: 5vw;
+	}
+	.close{
+		position: absolute;
+		right: 1vw;
+		top: 0.3vw;
+	}
+	.modal-head{
+		background-color: var(--colorPrimary);
+	}
+	.modal-title{
+		display: block;
+		font-size: 1.5vw;
+		text-transform: capitalize;
+		font-weight: 600;
+		color: var(--colorBtn);
+		padding: 1.2vw 0;
+	}
+	.modal-title-secondary{
+		display: block;
+		font-size: 1.2vw;
+		text-transform: capitalize;
+		font-weight: 600;
+		padding: 1vw 0 .5vw;
+	}
+	.modal-body{
+		padding: 0;
+	}
+	.form-modal{
+		padding: 1vw 2vw;
+	}
+	.modal-highlight-title{
+		display: block;
+		background-color: #f9f9f9;
+		text-align: center;
+		font-size: 1.2vw;
+		font-weight: 600;
+		padding: .4vw 0 .1vw;
+		color: var(--colorPrimary);
+	}
+	.modal-highlight{
+		list-style: none;
+		display: flex;
+		padding: 0;
+		background-color: #f9f9f9;
+		padding: 1vw 0;
+		margin-bottom: 0;
+	}
+	.modal-highlight li{
+		width: 33%;
+	}
+	.modal-highlight li:not(:last-child){
+		border-right: 1px solid var(--colorPrimary);
+	}
+	.modal-highlight li i{
+		display: block;
+		font-size: 4vw;
+		color: var(--colorPrimary);
+	}
+	.modal-highlight li span{
+		display: block;
+		font-size: 1vw;
+		color: var(--colorPrimary);
+		padding-top: .4vw;
+	}
+	.modal-call-btn, .modal-call-btn:hover{
+		display: block;
+		background-color: var(--colorPrimary);
+		color: var(--colorBtn);
+		padding: .5vw 0;
+		text-decoration: none;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -798,16 +880,14 @@ body {
 		text-align: center;
 		font-size: 14px;
 		width: 33%;
+		display: flex;
+	    flex-direction: row;
+	    align-items: center;
+	    justify-content: center;
 	}
 	.mob-action .nav-item:not(:last-child){
 		border-right: 1px solid var(--colorBtn);
 	}
-}
-
-
-/* Table Test Code */
-
-@media only screen and (max-width: 768px){
 
 	table.table-pricing , .table-pricing thead, .table-pricing tbody, .table-pricing th, .table-pricing td, .table-pricing tr {
 		display: block;
@@ -817,23 +897,19 @@ body {
 		top: -9999px;
 		left: -9999px;
 	}
-
     .table-pricing tr {
       margin: 0;
       padding: 10px 0;
-    }
-      
+    } 
     .table-pricing tr:nth-child(odd) {
       background: #ccc;
     }
-
 	.table-pricing td {
 		border: none;
 		position: relative;
 		text-align: center;
 		padding: 3px;
 	}
-
 	.table-pricing td:before {
 		position: absolute;
 		top: 0;
@@ -842,20 +918,68 @@ body {
 		padding-right: 10px;
 		white-space: nowrap;
 	}
-
 	.price-type{
 		font-size: 25px;
 		font-weight: 600
 	}
-
 	.price-amt{
 		font-size: 17px;
 		font-weight: 600
 	}
-
 	.table-pricing .btn-sm{
 		padding: 5px 15px;
     	font-size: 16px;
 	}
 
+	.mi{
+		margin-right: 5px
+	}
+	.mi.action-icon{
+		font-size: 18px;
+		color: var(--colorBtn);
+	}
+
+	.modal-logo{
+		margin-top: 15px;
+		height: 60px;
+	}
+	.close{
+		position: absolute;
+		right: 10px;
+		top: 3px;
+	}
+	.modal-head{
+		background-color: var(--colorPrimary);
+	}
+	.modal-body{
+		padding: 0;
+	}
+	.modal-title{
+		display: block;
+		font-size: 18px;
+		text-transform: capitalize;
+		font-weight: 600;
+		color: var(--colorBtn);
+		padding: 10px 0;
+	}
+	.modal-title-secondary{
+		display: block;
+		font-size: 15px;
+		text-transform: capitalize;
+		font-weight: 600;
+		padding: 10px 0 5px;
+	}
+	.form-modal{
+		padding: 5px 10px 10px;
+	}
+	.modal-highlight, .modal-highlight-title{
+		display: none;
+	}
+	.modal-call-btn, .modal-call-btn:hover{
+		display: block;
+		background-color: var(--colorPrimary);
+		color: var(--colorBtn);
+		padding: 5px 0;
+		text-decoration: none;
+	}
 }
