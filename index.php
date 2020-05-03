@@ -42,7 +42,7 @@
               <li class="nav-item"><a class="nav-link" href="#gallery"><span class="mi mi-gallery nav-icon"></span> Gallery</a></li>
               <li class="nav-item"><a class="nav-link" href="#location"><span class="mi mi-location nav-icon"></span> Location</a></li>
               <li class="nav-item"><a class="nav-link" href="#sitevisit"><span class="mi mi-sitevisit nav-icon"></span> Virtual Site Tour</a></li>
-              <li class="nav-item"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-toggle="modal" data-target="#enqModal"><span class="mi mi-download nav-icon"></span> Brochure</a></li>
+              <li class="nav-item"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><span class="mi mi-download nav-icon"></span> Brochure</a></li>
             </ul>
           </div>
         </nav>
@@ -89,7 +89,7 @@
           <div class="form-group">
             <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
           </div>
-          <button type="submit" class="btn btn-info micro-form-btn">Pre-Register Now</button>
+          <button type="submit" class="btn btn-info micro-form-btn" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
         </form>
       </div>
       <?php require "layout.php"; ?>
@@ -97,7 +97,7 @@
         <div class="og-section pb-2">
           <ul class="nav nav-fill og-block">
             <li class="nav-item enqModal" data-form="lg" data-title="Organize Site Visit" data-btn="Request Site Visit" data-enquiry="Organize Site Visit" data-toggle="modal" data-target="#enqModal">Organize Site Visit</li>
-            <li class="nav-item"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 919166757310</li>
+            <li class="nav-item" onclick="window.open('https://api.whatsapp.com/send?phone=919167757370&text=test wahtasapp msg', '_blank');"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 919166757310</li>
           </ul>
           <p class="og-heading my-1 text-secondary">Or Request A</p>
           <button class="btn btn-sm btn-info micro-form-btn-sm enqModal" data-form="sm" data-title="Immediate Call Back" data-btn="Request Call Now" data-enquiry="Immediate Call Back" data-toggle="modal" data-target="#enqModal"><span class="mi mi-call action-icon"></span> Call Back Now</button>
@@ -114,7 +114,7 @@
           <div class="form-group">
             <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
           </div>
-          <button type="submit" class="btn btn-info micro-form-btn">Pre-Register Now</button>
+          <button type="submit" class="btn btn-info micro-form-btn" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
         </form>
       </div>
       <ul class="mob-action nav nav-fill d-sm-block d-md-none d-lg-none">

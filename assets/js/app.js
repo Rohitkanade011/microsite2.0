@@ -8,7 +8,8 @@ $('.enqModal').click(function() {
   var Type  = $(this).data("form");
   var Title = $(this).data("title");
   var Btn   = $(this).data("btn");
-  var Enquiry = $(this).data("enquiry");
+  if($(this).data("redirect")){ var RedirectCookie = $(this).data("redirect"); }else{ var RedirectCookie = "enquire"; }
+  var Enquiry  = $(this).data("enquiry");
   $('#enqModal .modal-title').text(Title);
   $('#enqModal .micro-form-btn').text(Btn);
   $('#enqModal #enquireName').val(Enquiry);
@@ -23,6 +24,7 @@ $('.enqModal').click(function() {
   if(Type == "lg"){ 
     $('#enqModal .modal-head, #enqModal .form-md, #enqModal .form-lg').removeClass('d-none');
   }
+  if(RedirectCookie) setCookie('redirectCookie', RedirectCookie);
 });
 
 // Auto Enquiry Modal
@@ -42,6 +44,14 @@ function settimeout(){
   interval=setTimeout(function(){
     $('#enqModal').modal('show');
   },30000)
+}
+
+// Cookies
+function setCookie(cname, cvalue) {
+  var d = new Date();
+  d.setTime(d.getTime() + (1*24*60*60*1000));
+  var expires = "expires="+ d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 // Slider
