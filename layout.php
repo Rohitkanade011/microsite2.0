@@ -5,7 +5,7 @@
 	<p>Vicinia, premium residences spread across 5 acres of magnificence.</p>
 	<p>Bouquet of offerings including 2 & 3 BHK Premium and 3.5 BHK Luxury residences, Limited number of units per floor, Spacious Bedroom and living room designed to bring in ample sunlight and cross ventilation, Italian marble for living, dining and master bed room, Modular Kitchen (without kitchen appliances), Premium fixtures and fittings, Maid’s room with separate entrance, Video door phone with intercom facility</p>
 	<p>With easy accessibility to the Eastern and the Western suburbs of Mumbai and proximity to highways, hospitals, hotels, malls and schools save your precious time spent in commute. Come home to a place that makes life richer everyday</p>
-	<button class="btn btn-sm btn-outline-info sectio-bro-btn">Download Brochure</button>
+	<button class="btn btn-sm btn-outline-info sectio-bro-btn enqModal" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-toggle="modal" data-target="#enqModal"><span class="mi mi-download mr-1"></span> Download Brochure</button>
 	<img src="http://shapoorjivicinia.com/assets/img/Gateway-of-India_Mumbai.jpg" class="w-100 my-2">
 	<span class="d-block section-heading-sub text-capitalize mt-4">About Shapoorji Pallonji Real Estate</span>
 	<p>Legacy of 150 years of expertise in building residential, commercial and industrial structures Group Turnover of US$ 3 billion with over 35000 employees The first Indian construction company to enter the Middle East in the 1970s. List of architectural landmark include The Imperial – tallest residential tower in India, Mantri Pinnacle – tallest residential tower in South India, the palace of the Sultan of Oman among many others</p>
@@ -30,25 +30,25 @@
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">2 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">671 - 888 sq.ft.</td>
 			      <td class="price-amt">₹&nbsp;1.75&nbsp;Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info">Price&nbsp;Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-toggle="modal" data-target="#enqModal">Price&nbsp;Breakup</button></td>
 			    </tr>
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">3 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">1068 sq.ft.</td>
 			      <td class="price-amt">₹ 3.30 Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info">Price Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">3.5 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">1645 sq.ft.</td>
 			      <td class="price-amt">₹ 5.40 Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info">Price Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			  </tbody>
 			</table>
 		</div>
 		<div class="col-md-4">
-			<a href="#!" class="text-decoration-none">
+			<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Costing Details" data-toggle="modal" data-target="#enqModal">
 			<div class="at-property-item shadow-sm border border-grey mt-1">
 	            <div class="at-property-img">
 	                <img src="http://shapoorjivicinia.com/assets/img/costing-details.jpg" class="w-100">
@@ -85,7 +85,7 @@
 	<span class="d-block section-heading-sub text-capitalize mt-3">Floor Plan</span>
 	<div class="row">
 		<div class="col-md-4">
-			<a href="#!" class="text-decoration-none">
+			<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-toggle="modal" data-target="#enqModal">
 			<div class="at-property-item shadow-sm border border-grey mt-1">
 	            <div class="at-property-img">
 	                <img src="http://shapoorjivicinia.com/assets/img/2bhk.webp" class="floor-plan-img blur">
@@ -99,7 +99,7 @@
 	        </a>
 		</div>
 		<div class="col-md-4">
-			<a href="#!" class="text-decoration-none">
+			<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-toggle="modal" data-target="#enqModal">
 			<div class="at-property-item border border-grey mt-1">
 	            <div class="at-property-img">
 	                <img src="http://shapoorjivicinia.com/assets/img/3bhk.webp" class="floor-plan-img blur">
@@ -113,7 +113,7 @@
 	        </a>
 		</div>
 		<div class="col-md-4">
-			<a href="#!" class="text-decoration-none">
+			<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-toggle="modal" data-target="#enqModal">
 			<div class="at-property-item shadow-sm border border-grey mt-1">
 	            <div class="at-property-img">
 	                <img src="http://shapoorjivicinia.com/assets/img/3.5bhk.webp" class="floor-plan-img blur">
@@ -288,7 +288,7 @@
 <section class="section shadow-sm">
 	<span class="section-link" id="sitevisit"></span>
 	<span class="head text-capitalize">Virtual Site Tour</span>
-	<a data-fancybox="virtual" href="http://shapoorjivicinia.com/assets/img/masterplan.webp">
+	<a href="#" class="enqModal" data-form="lg" data-title="Virtual Site Visit" data-btn="Start Tour" data-enquiry="Virtual Site Tour" data-toggle="modal" data-target="#enqModal">
 	<div class="at-property-item my-2 pt-md-0">
         <div class="at-property-img vsv-img">
             <?php loadImgLg([ "src" => "testimg.jpg", "class" => "w-100", "style" => ""]); ?>

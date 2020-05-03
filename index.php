@@ -42,7 +42,7 @@
               <li class="nav-item"><a class="nav-link" href="#gallery"><span class="mi mi-gallery nav-icon"></span> Gallery</a></li>
               <li class="nav-item"><a class="nav-link" href="#location"><span class="mi mi-location nav-icon"></span> Location</a></li>
               <li class="nav-item"><a class="nav-link" href="#sitevisit"><span class="mi mi-sitevisit nav-icon"></span> Virtual Site Tour</a></li>
-              <li class="nav-item"><a class="nav-link" href="#" onclick="return false;" data-toggle="modal" data-target="#enqModal"><span class="mi mi-download nav-icon"></span> Brochure</a></li>
+              <li class="nav-item"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-toggle="modal" data-target="#enqModal"><span class="mi mi-download nav-icon"></span> Brochure</a></li>
             </ul>
           </div>
         </nav>
@@ -74,7 +74,7 @@
         </ul>
         <span class="pro-tag-line">Premium 2, 3 & 3.5 Bed Residences starting price</span>
         <span class="pro-price">1.75 Cr* <small>Onwards</small></span>
-        <button type="submit" class="btn btn-info micro-form-btn">Enquire Now</button>
+        <button class="btn btn-info micro-form-btn enqModal" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
         <span class="pro-rera"><span class="heading">RERA NO</span> : P51800002564</span>
       </div>
       <div class="mob-form d-sm-block d-md-none d-lg-none">
@@ -96,11 +96,11 @@
       <div class="micro-side text-center">
         <div class="og-section pb-2">
           <ul class="nav nav-fill og-block">
-            <li class="nav-item">Organize Site Visit</li>
+            <li class="nav-item enqModal" data-form="lg" data-title="Organize Site Visit" data-btn="Request Site Visit" data-enquiry="Organize Site Visit" data-toggle="modal" data-target="#enqModal">Organize Site Visit</li>
             <li class="nav-item"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 919166757310</li>
           </ul>
           <p class="og-heading my-1 text-secondary">Or Request A</p>
-          <button class="btn btn-sm btn-info micro-form-btn-sm"><span class="mi mi-call action-icon"></span> Call Back Now</button>
+          <button class="btn btn-sm btn-info micro-form-btn-sm enqModal" data-form="sm" data-title="Immediate Call Back" data-btn="Request Call Now" data-enquiry="Immediate Call Back" data-toggle="modal" data-target="#enqModal"><span class="mi mi-call action-icon"></span> Call Back Now</button>
         </div>
 
         <span class="d-block form-heading font-weight-bold my-2">Pre-Register here for Best Offers</span>
@@ -128,50 +128,7 @@
     </footer>
 
     <!-- Modal -->
-    <div class="modal fade" id="enqModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered enq-modal" role="document">
-        <div class="modal-content">
-          <div class="modal-body text-center">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-            <!-- <div class="modal-head">
-              <span class="modal-title">Download Brochure</span>
-            </div> -->
-            <img src="http://shapoorjivicinia.com/assets/img/Vicinialogo.svg" class="modal-logo">
-            <span class="modal-title-secondary">Register here and Available the <span class="text-danger">Best Offers!!</span></span>
-            <form action="" method="POST" class="form-modal">
-              <div class="form-group">
-                <input type="text" pattern="[a-zA-Z ]+" class="form-control rounded-0 micro-form-field" required placeholder="Name">
-              </div>
-              <div class="form-group">
-                <input type="text" pattern="[0-9]+" class="form-control rounded-0 micro-form-field" required placeholder="Mobile No">
-              </div>
-              <div class="form-group">
-                <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
-              </div>
-              <button type="submit" class="btn btn-info micro-form-btn">Pre-Register Now</button>
-            </form>
-            <span class="modal-highlight-title">&mdash; We Promise &mdash;</span>
-            <ul class="modal-highlight">
-              <li>
-                <i class="mi mi-support-call"></i>
-                <span>Instant Call Back</span>
-              </li>
-              <li>
-                <i class="mi mi-support-visit"></i>
-                <span>Free Site Visit</span>
-              </li>
-              <li>
-                <i class="mi mi-support-price"></i>
-                <span>Unmatched Price</span>
-              </li>
-            </ul>
-            <a href="tel:+919167757310" class="modal-call-btn"><i class="mi mi-call"></i> +91 9167757310</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php require "modal.php"; ?>
 
     <!-- Required JS -->
     <?php loadJS("https://code.jquery.com/jquery-3.4.1.slim.min.js", "./assets/js/jquery.js"); ?>

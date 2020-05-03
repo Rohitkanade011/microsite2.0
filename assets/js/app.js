@@ -3,6 +3,47 @@ $('.navbar-nav>li>a').on('click', function(){
     $('.navbar-collapse').collapse('hide');
 });
 
+// Enquiry Modal
+$('.enqModal').click(function() {        
+  var Type  = $(this).data("form");
+  var Title = $(this).data("title");
+  var Btn   = $(this).data("btn");
+  var Enquiry = $(this).data("enquiry");
+  $('#enqModal .modal-title').text(Title);
+  $('#enqModal .micro-form-btn').text(Btn);
+  $('#enqModal #enquireName').val(Enquiry);
+  if(Type == "sm" || Type == "md" || Type == "lg"){
+    $('#enqModal .modal-head').removeClass('d-none');
+    $('#enqModal .modal-logo, #enqModal .form-md, #enqModal .form-lg, #enqModal .modal-call-btn').addClass('d-none');
+  }
+  if(Type == "md"){ 
+    $('#enqModal .modal-head, #enqModal .form-md').removeClass('d-none');
+    $('#enqModal .form-lg').addClass('d-none');
+  }
+  if(Type == "lg"){ 
+    $('#enqModal .modal-head, #enqModal .form-md, #enqModal .form-lg').removeClass('d-none');
+  }
+});
+
+// Auto Enquiry Modal
+document.addEventListener("DOMContentLoaded", function(event) {
+   setTimeout(function(){
+       $('#enqModal').modal('show');
+   }, 3000);
+});
+
+// User Inactivity Enquiry Modal
+var interval;
+$(document).on('mousemove keyup keypress',function(){
+  clearTimeout(interval);
+  settimeout();
+});
+function settimeout(){
+  interval=setTimeout(function(){
+    $('#enqModal').modal('show');
+  },30000)
+}
+
 // Slider
 $('.ami-2').owlCarousel({
     autoplay: true,
