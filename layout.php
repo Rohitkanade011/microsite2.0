@@ -1,17 +1,17 @@
-<section class="section shadow-sm" id="overview">
+<section class="section wow fadeIn shadow-sm lazyload animated bounce" id="overview">
 	<span class="head text-capitalize d-none d-md-block">Overview</span>
 	<span class="d-block section-heading color-primary text-capitalize">Shapoorji Vicinia</span>
 	<span class="d-block section-heading-sub color-primary text-capitalize">At Chandivali Powai, Mumbai</span>
 	<p>Vicinia, premium residences spread across 5 acres of magnificence.</p>
 	<p>Bouquet of offerings including 2 & 3 BHK Premium and 3.5 BHK Luxury residences, Limited number of units per floor, Spacious Bedroom and living room designed to bring in ample sunlight and cross ventilation, Italian marble for living, dining and master bed room, Modular Kitchen (without kitchen appliances), Premium fixtures and fittings, Maid’s room with separate entrance, Video door phone with intercom facility</p>
 	<p>With easy accessibility to the Eastern and the Western suburbs of Mumbai and proximity to highways, hospitals, hotels, malls and schools save your precious time spent in commute. Come home to a place that makes life richer everyday</p>
-	<button class="btn btn-sm btn-outline-info sectio-bro-btn enqModal" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><span class="mi mi-download mr-1"></span> Download Brochure</button>
+	<button class="btn btn-sm btn-outline-info sectio-bro-btn overflow-hidden enqModal" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><span class="d-inline-block mi mi-download mr-1 animated infinite bounce slow"></span> Download Brochure</button>
 	<img src="http://shapoorjivicinia.com/assets/img/Gateway-of-India_Mumbai.jpg" class="w-100 my-2">
 	<span class="d-block section-heading-sub text-capitalize mt-4">About Shapoorji Pallonji Real Estate</span>
 	<p>Legacy of 150 years of expertise in building residential, commercial and industrial structures Group Turnover of US$ 3 billion with over 35000 employees The first Indian construction company to enter the Middle East in the 1970s. List of architectural landmark include The Imperial – tallest residential tower in India, Mantri Pinnacle – tallest residential tower in South India, the palace of the Sultan of Oman among many others</p>
 </section>
 
-<section class="section shadow-sm">
+<section class="section wow fadeIn shadow-sm lazyload animated bounce">
 	<span class="section-link" id="pricing"></span>
 	<span class="head text-capitalize">Price</span>
 	<div class="row">
@@ -64,7 +64,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm lazyload"
+<section class="section wow fadeIn shadow-sm lazyload"
 		 data-script="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', './assets/plugins/fancybox/jquery.fancybox.min.js'); ?>"
 		 data-include="css:<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
 
@@ -129,7 +129,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm">
+<section class="section wow fadeIn shadow-sm">
 	<span class="section-link" id="amenities"></span>
 	<span class="head text-capitalize">Amenities</span>
 	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -145,7 +145,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm">
+<section class="section wow fadeIn shadow-sm">
 	<span class="section-link" id="gallery"></span>
 	<span class="head text-capitalize">Gallery</span>
 	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -161,7 +161,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm" id="360view">
+<section class="section wow fadeIn shadow-sm" id="360view">
 	<span class="head text-capitalize">360&deg; View</span>
 	<iframe frameborder="0"
 	class="lazyload d-video"
@@ -170,7 +170,7 @@
     data-src="//www.youtube.com/embed/ZfV-aYdU4uE"></iframe>
 </section>
 
-<section class="section shadow-sm lazyload"
+<section class="section wow fadeIn shadow-sm lazyload"
 		 data-script="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', './assets/plugins/fancybox/jquery.fancybox.min.js'); ?>"
 		 data-include="css:<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
 
@@ -285,7 +285,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm">
+<section class="section wow fadeIn shadow-sm">
 	<span class="section-link" id="sitevisit"></span>
 	<span class="head text-capitalize">Virtual Site Tour</span>
 	<a href="#" class="enqModal" data-form="lg" data-title="Virtual Site Visit" data-btn="Start Tour" data-enquiry="Virtual Site Tour" data-redirect="virtualtour" data-toggle="modal" data-target="#enqModal">

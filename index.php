@@ -15,6 +15,7 @@
     <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css", "./assets/plugins/OwlCarousel/owl.theme.default.css"); ?>
     <?php lazyLoadCSS("", "./assets/plugins/OwlCarousel/app.css"); ?>
     <?php $owlLoaded = true; } ?>
+    <?php lazyLoadCSS("", "./assets/plugins/animate/animate.min.css"); ?>
 
     <!-- Style -->
     <?php lazyLoadCSS("", "./design/amenities/amenities-".$amiStyle.".css"); ?>
@@ -42,7 +43,7 @@
               <li class="nav-item"><a class="nav-link" href="#gallery"><span class="mi mi-gallery nav-icon"></span> Gallery</a></li>
               <li class="nav-item"><a class="nav-link" href="#location"><span class="mi mi-location nav-icon"></span> Location</a></li>
               <li class="nav-item"><a class="nav-link" href="#sitevisit"><span class="mi mi-sitevisit nav-icon"></span> Virtual Site Tour</a></li>
-              <li class="nav-item"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><span class="mi mi-download nav-icon"></span> Brochure</a></li>
+              <li class="nav-item"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><i class="mi mi-download nav-icon d-inline-block mi mi-download mr-1 animated infinite bounce slow"></i> Brochure</a></li>
             </ul>
           </div>
         </nav>
@@ -62,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="info-box">
+      <div class="info-box wow bounceInLeft">
         <span class="pro-status">Booking Open</span>
         <span class="pro-title">Shapoorji Vicinia</span>
         <span class="pro-add">Chandivali Powai, Mumbai</span>
@@ -74,7 +75,7 @@
         </ul>
         <span class="pro-tag-line">Premium 2, 3 & 3.5 Bed Residences starting price</span>
         <span class="pro-price">1.75 Cr* <small>Onwards</small></span>
-        <button class="btn btn-info micro-form-btn enqModal" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
+        <button class="btn btn-info micro-form-btn enqModal animated infinite tada slower delay-3s" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
         <span class="pro-rera"><span class="heading">RERA NO</span> : P51800002564</span>
       </div>
       <div class="mob-form d-sm-block d-md-none d-lg-none">
@@ -114,7 +115,7 @@
           <div class="form-group">
             <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
           </div>
-          <button type="submit" class="btn btn-info micro-form-btn" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
+          <button type="submit" class="btn btn-info micro-form-btn mt-2 animated infinite tada slower" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
         </form>
       </div>
       <ul class="mob-action nav nav-fill d-sm-block d-md-none d-lg-none">
@@ -138,6 +139,7 @@
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js", "./assets/plugins/lazysizes/lazysizes.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js", "./assets/plugins/OwlCarousel/owl.carousel.js"); ?>
     <?php loadJS("", "./assets/js/app.js"); ?>
+    <?php loadJS("", "./assets/plugins/animate/wow.min.js"); ?>
     
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
@@ -148,6 +150,7 @@
         // Fonts =========================================================================================================
         $('head').append($('<link rel="stylesheet" type="text/css" crossorigin="anonymous" />').attr('href','<?= loadURL('https://fonts.googleapis.com/css?family=Muli|Roboto&display=swap', './assets/fonts/font.css'); ?>'));
       });
+      new WOW().init();
     </script>
 
 </body>
