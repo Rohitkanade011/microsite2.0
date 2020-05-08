@@ -63,6 +63,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.mi-loc-list:before {
+  content: "\e912";
+}
+.mi-loc-list-2:before {
+  content: "\e913";
+}
 .mi-ami:before {
   content: "\e905";
 }

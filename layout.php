@@ -1,17 +1,22 @@
-<section class="section wow fadeIn shadow-sm lazyload animated bounce" id="overview">
+<section class="section shadow-sm lazyload animated bounce" id="overview">
 	<span class="head text-capitalize d-none d-md-block">Overview</span>
+
 	<span class="d-block section-heading color-primary text-capitalize">Shapoorji Vicinia</span>
 	<span class="d-block section-heading-sub color-primary text-capitalize">At Chandivali Powai, Mumbai</span>
+
 	<p>Vicinia, premium residences spread across 5 acres of magnificence.</p>
 	<p>Bouquet of offerings including 2 & 3 BHK Premium and 3.5 BHK Luxury residences, Limited number of units per floor, Spacious Bedroom and living room designed to bring in ample sunlight and cross ventilation, Italian marble for living, dining and master bed room, Modular Kitchen (without kitchen appliances), Premium fixtures and fittings, Maid’s room with separate entrance, Video door phone with intercom facility</p>
 	<p>With easy accessibility to the Eastern and the Western suburbs of Mumbai and proximity to highways, hospitals, hotels, malls and schools save your precious time spent in commute. Come home to a place that makes life richer everyday</p>
+
 	<button class="btn btn-sm btn-outline-info sectio-bro-btn overflow-hidden enqModal" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><span class="d-inline-block mi mi-download mr-1 animated infinite bounce slow"></span> Download Brochure</button>
-	<img src="http://shapoorjivicinia.com/assets/img/Gateway-of-India_Mumbai.jpg" class="w-100 my-2">
+
+	<?php loadImg([ "src" => "Gateway-of-India_Mumbai.jpg", "class" => "w-100 my-2", "style" => ""]); ?>
+
 	<span class="d-block section-heading-sub text-capitalize mt-4">About Shapoorji Pallonji Real Estate</span>
 	<p>Legacy of 150 years of expertise in building residential, commercial and industrial structures Group Turnover of US$ 3 billion with over 35000 employees The first Indian construction company to enter the Middle East in the 1970s. List of architectural landmark include The Imperial – tallest residential tower in India, Mantri Pinnacle – tallest residential tower in South India, the palace of the Sultan of Oman among many others</p>
 </section>
 
-<section class="section wow fadeIn shadow-sm lazyload animated bounce">
+<section class="section shadow-sm lazyload animated bounce">
 	<span class="section-link" id="pricing"></span>
 	<span class="head text-capitalize">Price</span>
 	<div class="row">
@@ -51,7 +56,7 @@
 			<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Costing Details" data-toggle="modal" data-target="#enqModal">
 			<div class="at-property-item shadow-sm border border-grey mt-1">
 	            <div class="at-property-img">
-	                <img src="http://shapoorjivicinia.com/assets/img/costing-details.jpg" class="w-100">
+					<?php loadImgSm([ "src" => "costing-details.jpg", "class" => "w-100", "style" => ""]); ?>
 	                <div class="at-property-overlayer"></div>
 	                <span class="btn btn-default at-property-btn">Equire Now</span>
 	            </div>
@@ -64,18 +69,18 @@
 	</div>
 </section>
 
-<section class="section wow fadeIn shadow-sm lazyload"
+<section class="section shadow-sm lazyload"
 		 data-script="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', './assets/plugins/fancybox/jquery.fancybox.min.js'); ?>"
-		 data-include="css:<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
+		 data-link="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
 
 	<span class="section-link" id="sitefloorplan"></span>
 	<span class="head text-capitalize">Site &amp; Floor Plan</span>
 	<span class="d-block section-heading-sub text-capitalize">Master Plan</span>
 
-	<a data-fancybox="masterplan" href="http://shapoorjivicinia.com/assets/img/masterplan.webp">
+	<a data-fancybox="masterplan" href="assets/img/masterplan-768w.jpg" data-srcset="<?php loadImgLgURL("masterplan.jpg"); ?>">
 	<div class="at-property-item mt-1">
         <div class="at-property-img master-plan">
-            <img class="shadow-sm border border-grey" src="http://shapoorjivicinia.com/assets/img/masterplan.webp">
+            <?php loadImgSm([ "src" => "masterplan.jpg", "class" => "shadow-sm border border-grey", "style" => ""]); ?>
             <div class="at-property-overlayer"></div>
             <span class="at-property-btn">View Master Plan</span>
         </div>
@@ -88,7 +93,7 @@
 			<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">
 			<div class="at-property-item shadow-sm border border-grey mt-1">
 	            <div class="at-property-img">
-	                <img src="http://shapoorjivicinia.com/assets/img/2bhk.webp" class="floor-plan-img blur">
+	                <?php loadImgSm([ "src" => "2bhk.jpg", "class" => "floor-plan-img blur", "style" => ""]); ?>
 	                <div class="at-property-overlayer"></div>
 	                <span class="btn btn-default at-property-btn" role="button">Equire Now</span>
 	            </div>
@@ -102,7 +107,7 @@
 			<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">
 			<div class="at-property-item border border-grey mt-1">
 	            <div class="at-property-img">
-	                <img src="http://shapoorjivicinia.com/assets/img/3bhk.webp" class="floor-plan-img blur">
+	                <?php loadImgSm([ "src" => "3bhk.jpg", "class" => "floor-plan-img blur", "style" => ""]); ?>
 	                <div class="at-property-overlayer"></div>
 	                <span class="btn btn-default at-property-btn" role="button">Equire Now</span>
 	            </div>
@@ -116,7 +121,7 @@
 			<a href="#" class="text-decoration-none enqModal" data-form="lg" data-title="Send me plan details" data-btn="Send now" data-enquiry="Floor Plan" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">
 			<div class="at-property-item shadow-sm border border-grey mt-1">
 	            <div class="at-property-img">
-	                <img src="http://shapoorjivicinia.com/assets/img/3.5bhk.webp" class="floor-plan-img blur">
+	                <?php loadImgSm([ "src" => "3.5bhk.jpg", "class" => "floor-plan-img blur", "style" => ""]); ?>
 	                <div class="at-property-overlayer"></div>
 	                <span class="btn btn-default at-property-btn" role="button">Equire Now</span>
 	            </div>
@@ -129,7 +134,7 @@
 	</div>
 </section>
 
-<section class="section wow fadeIn shadow-sm">
+<section class="section shadow-sm">
 	<span class="section-link" id="amenities"></span>
 	<span class="head text-capitalize">Amenities</span>
 	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -145,7 +150,7 @@
 	</div>
 </section>
 
-<section class="section wow fadeIn shadow-sm">
+<section class="section shadow-sm">
 	<span class="section-link" id="gallery"></span>
 	<span class="head text-capitalize">Gallery</span>
 	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -161,7 +166,7 @@
 	</div>
 </section>
 
-<section class="section wow fadeIn shadow-sm" id="360view">
+<section class="section shadow-sm" id="360view">
 	<span class="head text-capitalize">360&deg; View</span>
 	<iframe frameborder="0"
 	class="lazyload d-video"
@@ -170,9 +175,9 @@
     data-src="//www.youtube.com/embed/ZfV-aYdU4uE"></iframe>
 </section>
 
-<section class="section wow fadeIn shadow-sm lazyload"
+<section class="section shadow-sm lazyload"
 		 data-script="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', './assets/plugins/fancybox/jquery.fancybox.min.js'); ?>"
-		 data-include="css:<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
+		 data-link="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
 
 	<span class="section-link" id="location"></span>
 	<span class="head text-capitalize">Location</span>
@@ -187,10 +192,10 @@
 		</div>
 		<div class="col-md-5 col-sm-12 lmap-div">
 			<span class="d-block section-heading-sub text-capitalize">Location Map</span>
-			<a data-fancybox="location-map" href="http://shapoorjivicinia.com/assets/img/masterplan.webp">
+			<a data-fancybox="location-map" href="assets/img/fs-768w.jpg" data-srcset="<?php loadImgLgURL("fs.jpg"); ?>">
 			<div class="at-property-item mb-2">
 		        <div class="at-property-img master-plan">
-		            <img class="shadow-sm border border-grey" src="http://shapoorjivicinia.com/assets/img/masterplan.webp">
+		            <?php loadImgSm([ "src" => "fs.jpg", "class" => "shadow-sm border border-grey", "style" => ""]); ?>
 		            <div class="at-property-overlayer"></div>
 		            <span class="at-property-btn">View Location Map</span>
 		        </div>
@@ -214,68 +219,14 @@
 	</ul>
 	<div class="tab-content" id="pills-tabContent">
 		<div class="tab-pane fade show active" id="loc-1" role="tabpanel" aria-labelledby="pills-loc-1">
-			<?php if($owlLoaded){ ?>
-			<div class="loc-con owl-carousel owl-theme lazyload" data-include="css:<?= loadURL('', './design/amenities/amenities-2.css'); ?>">
-				<div class="item flex-fill ami-block ami-4">
-					<div class="ami-container">
-				  		<span class="loc-con-head">2.0 Km</span>
-				  		<span class="ami-title">JVLR / Powai Lake</span>
-					</div>
-				</div>
-				<div class="item flex-fill ami-block ami-4">
-					<div class="ami-container">
-				  		<span class="loc-con-head">6.3 Km</span>
-				  		<span class="ami-title">Western Express Hwy</span>
-					</div>
-				</div>
-				<div class="item flex-fill ami-block ami-4">
-					<div class="ami-container">
-				  		<span class="loc-con-head">6.8 Km</span>
-				  		<span class="ami-title">Eastern Express Hwy</span>
-					</div>
-				</div>
-				<div class="item flex-fill ami-block ami-4">
-					<div class="ami-container">
-				  		<span class="loc-con-head">8.0 Km</span>
-				  		<span class="ami-title">International Airport</span>
-					</div>
-				</div>
-				<div class="item flex-fill ami-block ami-4">
-					<div class="ami-container">
-				  		<span class="loc-con-head">10.1 Km</span>
-				  		<span class="ami-title">Bandra Kurla Complex</span>
-					</div>
-				</div>
-			</div>
-			<?php }else{ ?>
-			<div class="loc-con d-flex flex-column flex-sm-row">
-				<div class="flex-fill ami-block ami-1">
-					<div class="ami-container">
-				  		<span class="loc-con-head">2.0 Km</span>
-				  		<span class="ami-title">JVLR / Powai Lake</span>
-					</div>
-				</div>
-				<div class="flex-fill ami-block ami-1">
-					<div class="ami-container">
-				  		<span class="loc-con-head">6.3 Km</span>
-				  		<span class="ami-title">Western Express Hwy</span>
-					</div>
-				</div>
-				<div class="flex-fill ami-block ami-1">
-					<div class="ami-container">
-				  		<span class="loc-con-head">6.8 Km</span>
-				  		<span class="ami-title">Eastern Express Hwy</span>
-					</div>
-				</div>
-				<div class="flex-fill ami-block ami-1">
-					<div class="ami-container">
-				  		<span class="loc-con-head">8.0 Km</span>
-				  		<span class="ami-title">International Airport</span>
-					</div>
-				</div>
-			</div>
-			<?php } ?>
-		</div>
+			<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+		    	<div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> <b>2.0 Km</b> - JVLR / Powai Lake</div>
+		    	<div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> <b>6.3 Km</b> - Western Express Hwy</div>
+		    	<div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> <b>6.8 Km</b> - Eastern Express Hwy</div>
+		    	<div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> <b>8.0 Km</b> - International Airport</div>
+		    	<div class="col my-2"><i class="mi mi-loc-list-2 color-primary loc-icon"></i> <b>10.1 Km</b> - Bandra Kurla Complex</div>
+		  	</div>		
+		</div>		
 		<div class="tab-pane fade" id="loc-2" role="tabpanel" aria-labelledby="pills-loc-2">
 			Surrounded by city’s best Schools and Colleges such as Hiranandani School, Bombay Scottish, Podar International School, IIT Bombay, ICFAI Biz School etc
 		</div>
@@ -285,8 +236,7 @@
 	</div>
 </section>
 
-<section class="section wow fadeIn shadow-sm">
-	<span class="section-link" id="sitevisit"></span>
+<section class="section shadow-sm">
 	<span class="head text-capitalize">Virtual Site Tour</span>
 	<a href="#" class="enqModal" data-form="lg" data-title="Virtual Site Visit" data-btn="Start Tour" data-enquiry="Virtual Site Tour" data-redirect="virtualtour" data-toggle="modal" data-target="#enqModal">
 	<div class="at-property-item my-2 pt-md-0">
@@ -304,4 +254,5 @@
 
     </div>
 	</a>
+	<span class="section-link" id="sitevisit"></span>
 </section>

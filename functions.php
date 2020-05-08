@@ -68,14 +68,14 @@
           $filePath = "assets/img/webp/";
           $fileExt = "webp";  
         }
-        echo '<img data-sizes="auto" data-src="'. $filePath.$fileName .'-thumb.'. $fileExt .'" class="lazyload '. $data['class'] .'" data-srcset="'. $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt .' 420w,'. $filePath.$fileName .'-768w.'. $fileExt .'" '; if($data['style'] != "" ){ echo 'style="'. $data['style'] .'" '; } echo ' />';
+        echo '<img data-sizes="auto" data-lowsrc="'. $filePath.$fileName .'-thumb.'. $fileExt .'" class="lazyload '. $data['class'] .'" data-srcset="'. $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt .' 420w,'. $filePath.$fileName .'-768w.'. $fileExt .'" '; if($data['style'] != "" ){ echo 'style="'. $data['style'] .'" '; } echo ' />';
         $fileExt = pathinfo($data['src'], PATHINFO_EXTENSION);
         $filePath = "assets/img/";
         echo '<noscript><img src="'. $filePath.$fileName .'-thumb.'. $fileExt .'" class="'. $data['class'] .'" srcset="'. $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt .' 420w,'. $filePath.$fileName .'-768w.'. $fileExt .'" '; if($data['style'] != "" ){ echo 'style="'. $data['style'] .'" '; } echo ' /></noscript>';
     }
 
 
-      function loadImgLg($data){
+    function loadImgSm($data){
         $fileName = pathinfo($data['src'], PATHINFO_FILENAME);
         $fileExt = pathinfo($data['src'], PATHINFO_EXTENSION);
         $filePath = "assets/img/";
@@ -83,11 +83,49 @@
           $filePath = "assets/img/webp/";
           $fileExt = "webp";  
         }
-        echo '<img data-sizes="auto" data-src="'. $filePath.$fileName .'-thumb.'. $fileExt .'" class="lazyload '. $data['class'] .'" data-srcset="'. $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt .' 420w,'. $filePath.$fileName .'-768w.'. $fileExt .' 768w,'. $filePath.$fileName .'-1000w.'. $fileExt .' 1000w,'. $filePath.$fileName .'-1200w.'. $fileExt .' 1200w,'. $filePath.$fileName .'-1280w.'. $fileExt .' 1280w,'. $filePath.$fileName .'-1366w.'. $fileExt .' 1366w,'. $filePath.$fileName .'-1400w.'. $fileExt .'" '; if($data['style'] != "" ){ echo 'style="'. $data['style'] .'" '; } echo ' />';
+        echo '<img data-sizes="auto" data-lowsrc="'. $filePath.$fileName .'-thumb.'. $fileExt .'" class="lazyload '. $data['class'] .'" data-srcset="'. $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt .'" '; if($data['style'] != "" ){ echo 'style="'. $data['style'] .'" '; } echo ' />';
+        $fileExt = pathinfo($data['src'], PATHINFO_EXTENSION);
+        $filePath = "assets/img/";
+        echo '<noscript><img src="'. $filePath.$fileName .'-thumb.'. $fileExt .'" class="'. $data['class'] .'" srcset="'. $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt .'" '; if($data['style'] != "" ){ echo 'style="'. $data['style'] .'" '; } echo ' /></noscript>';
+    }
+
+
+    function loadImgLg($data){
+        $fileName = pathinfo($data['src'], PATHINFO_FILENAME);
+        $fileExt = pathinfo($data['src'], PATHINFO_EXTENSION);
+        $filePath = "assets/img/";
+        if( strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) {
+          $filePath = "assets/img/webp/";
+          $fileExt = "webp";  
+        }
+        echo '<img data-sizes="auto" data-lowsrc="'. $filePath.$fileName .'-thumb.'. $fileExt .'" class="lazyload '. $data['class'] .'" data-srcset="'. $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt .' 420w,'. $filePath.$fileName .'-768w.'. $fileExt .' 768w,'. $filePath.$fileName .'-1000w.'. $fileExt .' 1000w,'. $filePath.$fileName .'-1200w.'. $fileExt .' 1200w,'. $filePath.$fileName .'-1280w.'. $fileExt .' 1280w,'. $filePath.$fileName .'-1366w.'. $fileExt .' 1366w,'. $filePath.$fileName .'-1400w.'. $fileExt .'" '; if($data['style'] != "" ){ echo 'style="'. $data['style'] .'" '; } echo ' />';
         $fileExt = pathinfo($data['src'], PATHINFO_EXTENSION);
         $filePath = "assets/img/";
         echo '<noscript>
                 <img src="'. $filePath.$fileName .'-thumb.'. $fileExt .'" class="'. $data['class'] .'" srcset="'. $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt .' 420w,'. $filePath.$fileName .'-768w.'. $fileExt .' 768w,'. $filePath.$fileName .'-1000w.'. $fileExt .' 1000w,'. $filePath.$fileName .'-1200w.'. $fileExt .' 1200w,'. $filePath.$fileName .'-1280w.'. $fileExt .' 1280w,'. $filePath.$fileName .'-1366w.'. $fileExt .' 1366w,'. $filePath.$fileName .'-1400w.'. $fileExt .'" '; if($data['style'] != "" ){ echo 'style="'. $data['style'] .'" '; } echo ' /></noscript>';
-      }
+    }
+
+
+    function loadImgURL($data){
+		$fileName = pathinfo($data, PATHINFO_FILENAME);
+		$fileExt = pathinfo($data, PATHINFO_EXTENSION);
+		$filePath = "assets/img/";
+		echo $filePath.$fileName .'-360w.'. $fileExt .' 200w,'. $filePath.$fileName .'-420w.'. $fileExt .' 320w,'. $filePath.$fileName .'-768w.'. $fileExt .' 360w,'. $filePath.$fileName .'-768w.'. $fileExt .' 420w,'. $filePath.$fileName .'-1000w.'. $fileExt;
+	}
+
+	function loadImgSmURL($data){
+		$fileName = pathinfo($data, PATHINFO_FILENAME);
+		$fileExt = pathinfo($data, PATHINFO_EXTENSION);
+		$filePath = "assets/img/";
+		echo $filePath.$fileName .'-200w.'. $fileExt .' 200w,'. $filePath.$fileName .'-320w.'. $fileExt .' 320w,'. $filePath.$fileName .'-360w.'. $fileExt .' 360w,'. $filePath.$fileName .'-420w.'. $fileExt;
+	}
+
+	function loadImgLgURL($data){
+		$fileName = pathinfo($data, PATHINFO_FILENAME);
+		$fileExt = pathinfo($data, PATHINFO_EXTENSION);
+		$filePath = "assets/img/";
+		echo $filePath.$fileName .'-360w.'. $fileExt .' 200w,'. $filePath.$fileName .'-420w.'. $fileExt .' 320w,'. $filePath.$fileName .'-768w.'. $fileExt .' 360w,'. $filePath.$fileName .'-768w.'. $fileExt .' 420w,'. $filePath.$fileName .'-1000w.'. $fileExt .' 768w,'. $filePath.$fileName .'-1280w.'. $fileExt .' 1000w,'. $filePath.$fileName .'-1400w.'. $fileExt;
+	}
+
 
 ?>

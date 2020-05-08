@@ -1,0 +1,54 @@
+******************************
+*** Microsite Template 2.0 ***
+******************************
+
+Change Log:
+
+- Design Log
+	***** ( Landing Page ) *****
+	- Responsive screens
+	- Main view & side view widths
+	- Font styles & font Size
+	- Section spacing
+	- Navigaton logo Size & spacing
+	- Animation
+	- Hover Overlay Design
+	- Amenities, Gallery & Location Sections
+		- Tabs format
+		- Multiple Designs
+	- Gallery OR Photo Lightbox (popup) design
+		- Slide Show
+		- Download Option
+		- Share Option
+	- Dynamic Virtual Tour
+	- Disclaimer spacing anf font size issue fixed
+	- Popup design
+	- Auto Popup override issue fixed
+	- User Inactive Enquiry Popup
+
+	==== Mobile Changes ====
+	- Open form
+	- Pricing section
+
+	***** ( Thanks Page ) *****
+
+
+- Performace Log
+	- Image Optimization
+		- Responsive
+		- Proressive
+		- WEBP/JPG/PNG/SVG
+	- Less HTML Dom Elements
+	- Improved Lazy Load
+	- Load After Page CSS / JS (Non-Important)
+	- Web Fonts (WOFF/ WOFF2)
+	- Load CDN (If Available)
+	- Custom SVG Icon Sets
+
+
+- Development Log
+	- Data file format
+	- Image Structure
+	- Default file format
+	- Thanks Page Logic
+	- Auto Popup Logic

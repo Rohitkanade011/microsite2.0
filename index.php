@@ -1,4 +1,4 @@
-<?php require "functions.php"; $amiStyle = 3; $galStyle = 2; $owlLoaded = false; ?>
+<?php require "functions.php"; $amiStyle = 1; $galStyle = 1; $owlLoaded = false; ?>
 <!doctype html>
 <html lang="en">
 
@@ -43,7 +43,7 @@
               <li class="nav-item"><a class="nav-link" href="#gallery"><span class="mi mi-gallery nav-icon"></span> Gallery</a></li>
               <li class="nav-item"><a class="nav-link" href="#location"><span class="mi mi-location nav-icon"></span> Location</a></li>
               <li class="nav-item"><a class="nav-link" href="#sitevisit"><span class="mi mi-sitevisit nav-icon"></span> Virtual Site Tour</a></li>
-              <li class="nav-item"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><i class="mi mi-download nav-icon d-inline-block mi mi-download mr-1 animated infinite bounce slow"></i> Brochure</a></li>
+              <li class="nav-item overflow-hidden"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><i class="mi mi-download nav-icon d-inline-block animated infinite bounce slow"></i> Brochure</a></li>
             </ul>
           </div>
         </nav>
@@ -63,7 +63,7 @@
           </div>
         </div>
       </div>
-      <div class="info-box wow bounceInLeft">
+      <div class="info-box">
         <span class="pro-status">Booking Open</span>
         <span class="pro-title">Shapoorji Vicinia</span>
         <span class="pro-add">Chandivali Powai, Mumbai</span>
@@ -134,23 +134,24 @@
     <!-- Required JS -->
     <?php loadJS("https://code.jquery.com/jquery-3.4.1.slim.min.js", "./assets/js/jquery.js"); ?>
     <!-- Plugins -->
+    <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/object-fit/ls.object-fit.min.js", "./assets/plugins/lazysizes/plugins/object-fit/ls.object-fit.min.js"); ?>
+    <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/parent-fit/ls.parent-fit.min.js", "./assets/plugins/lazysizes/plugins/parent-fit/ls.parent-fit.min.js"); ?>
+    <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/blur-up/ls.blur-up.min.js", "./assets/plugins/lazysizes/plugins/blur-up/ls.blur-up.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/unveilhooks/ls.unveilhooks.min.js", "./assets/plugins/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"); ?>
-    <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/include/ls.include.min.js", "./assets/plugins/lazysizes/plugins/include/ls.include.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js", "./assets/plugins/lazysizes/lazysizes.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js", "./assets/plugins/OwlCarousel/owl.carousel.js"); ?>
     <?php loadJS("", "./assets/js/app.js"); ?>
-    <?php loadJS("", "./assets/plugins/animate/wow.min.js"); ?>
     
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
         // Loader ========================================================================================================
         document.getElementById("loader").remove();
+        // $("#loader").addClass("animated fadeOut");
         // Required JS ===================================================================================================
         <?php lazyLoadJS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", "./assets/js/bootstrap.js"); ?>
         // Fonts =========================================================================================================
         $('head').append($('<link rel="stylesheet" type="text/css" crossorigin="anonymous" />').attr('href','<?= loadURL('https://fonts.googleapis.com/css?family=Muli|Roboto&display=swap', './assets/fonts/font.css'); ?>'));
       });
-      new WOW().init();
     </script>
 
 </body>
