@@ -75,7 +75,7 @@
         </ul>
         <span class="pro-tag-line">Premium 2, 3 & 3.5 Bed Residences starting price</span>
         <span class="pro-price">1.75 Cr* <small>Onwards</small></span>
-        <button class="btn btn-info micro-form-btn enqModal animated infinite tada slower delay-3s" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
+        <button class="btn btn-info micro-form-btn enqModal animated infinite tada slower delay-3s" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
         <span class="pro-rera"><span class="heading">RERA NO</span> : P51800002564</span>
       </div>
       <div class="mob-form d-sm-block d-md-none d-lg-none">
@@ -119,9 +119,9 @@
         </form>
       </div>
       <ul class="mob-action nav nav-fill d-sm-block d-md-none d-lg-none">
-        <li class="nav-item"><span class="mi mi-call action-icon"></span> Call</li>
-        <li class="nav-item"><span class="mi mi-enquire action-icon"></span> Enquire</li>
-        <li class="nav-item"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> WhatsApp</li>
+        <li class="nav-item" onclick="javascript:location.href='tel:+919167757310'"><span class="mi mi-call action-icon"></span> Call</li>
+        <li class="nav-item enqModal" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal"><span class="mi mi-enquire action-icon"></span> Enquire</li>
+        <li class="nav-item" onclick="window.open('https://api.whatsapp.com/send?phone=919167757370&text=test wahtasapp msg', '_blank');"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> WhatsApp</li>
       </ul>
     </main>
     <footer class="disclaimer">
