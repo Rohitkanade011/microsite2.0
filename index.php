@@ -125,7 +125,7 @@
       </ul>
     </main>
     <footer class="disclaimer">
-       <b>Disclaimer :</b> The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purpose only. This is not the official website. Website maintained by online marketing agency. We may share data with rera registered brokers/companies for further processing. We may also send updates to the mobile number/email id registered with us. All Rights Reserved.
+       <b>Disclaimer :</b> The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purposes only. This is the official website of authorized marketing partner (PropertyPistol Real Estate Brokers L.L.C.). We may send updates to the mobile number/email id registered with us. All Rights Reserved.
     </footer>
 
     <!-- Modal -->

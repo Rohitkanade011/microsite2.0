@@ -65,12 +65,6 @@ body {
 }
 
 
-@-webkit-keyframes rotate {
-  100% {
-    -webkit-transform: rotate(360deg);
-  }
-}
-
 .color-primary{
 	color: var(--colorPrimary);
 }
@@ -83,7 +77,7 @@ body {
 }
 .navbar.micro-navbar .nav-item .nav-link.active{
 	background-color: var(--colorPrimary);
-	color: #ffffff;
+	color: var(--colorBtn);
 }
 .navbar.micro-navbar .nav-item .nav-link{
 	color: #000000;

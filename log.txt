@@ -31,7 +31,12 @@ Change Log:
 	- Pricing section
 
 	***** ( Thanks Page ) *****
-
+	- Responsive screens
+	- New Design
+	- New Logic
+	- Removed Enquiry Elements
+		- Enquiry Popup
+		- Chat box
 
 - Performace Log
 	- Image Optimization
