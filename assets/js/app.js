@@ -1,3 +1,13 @@
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  // Loader ========================================================================================================
+  document.getElementById("loader").remove();
+  // Auto Enquiry Modal
+  setTimeout(function(){
+       $('#enqModal').modal('show');
+   }, 3000);
+});
+
 // Navigation
 $('.navbar-nav>li>a').on('click', function(){
     $('.navbar-collapse').collapse('hide');
@@ -25,13 +35,6 @@ $('.enqModal').click(function() {
     $('#enqModal .modal-head, #enqModal .form-md, #enqModal .form-lg').removeClass('d-none');
   }
   if(RedirectCookie) setCookie('redirectCookie', RedirectCookie);
-});
-
-// Auto Enquiry Modal
-document.addEventListener("DOMContentLoaded", function(event) {
-   setTimeout(function(){
-       $('#enqModal').modal('show');
-   }, 3000);
 });
 
 // User Inactivity Enquiry Modal

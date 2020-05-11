@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>New Template 2.0</title>
     <?php loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css"); ?>
-    <!-- <link rel="stylesheet" href="./assets/css/style.css" /> -->
     <link rel="stylesheet" href="./assets/css/thanks.css" />
 
     <!-- Plugins -->
@@ -49,26 +48,49 @@
     </header>
     <main>
 
-      <div class="d-md-flex flex-row flex-md-row-reverse main-container">
-        <div class="d-flex flex-fill bg-white thanks-block text-center flex-column justify-content-center align-items-center">
-          <img src="assets/img/comman/thanks-icon.svg" class="thanks-icon">
-          <span class="thanks-title font-weight-bold text-capitalize">You're all set!</span>
-          <span class="thanks-subtitle font-weight-bold text-capitalize">Greetings From Shapoorji Vicinia</span>
-          <span class="thanks-msg">Thanks you for expressing interest on our website. <span class="d-md-block">Our expert will get in touch with you shortly.</span></span>
-          <a href="index.php" class="btn btn-light rounded-0 thanks-btn text-capitalize">&larr; Go back to Home</a>
-        </div>
-        <?php if($thanksStutus == "brochure" OR $thanksStutus == "virtual" OR $thanksStutus == "floorplan"){ ?>
-        <div class="d-flex flex-fill bg-light info-block flex-column justify-content-center">
+        <div class="d-md-flex flex-row flex-md-row-reverse main-container">
+          <?php if(isset($_GET['share'])){ ?>
+          <div class="d-flex flex-fill bg-white thanks-block text-center flex-column justify-content-center align-items-center">
+            <img src="assets/img/comman/thanks-expire.svg" class="thanks-icon">
+            <span class="thanks-title font-weight-bold text-capitalize text-danger">Oops!</span>
+            <span class="thanks-subtitle font-weight-bold text-capitalize">Your Session is expired</span>
+            <span class="thanks-msg">You will redirecting <span id="count"></span> Seconds in to our Home Page</span>
+            <a href="index.php" class="btn btn-light rounded-0 thanks-btn text-capitalize">&larr; Go back to Home</a>
+          </div>
+          <script>
+            // var count = 5; var countdown = setInterval(function(){
+            //   $("#count").text(count);
+            //   if (count == 0){ clearInterval(countdown); window.open('index.php', "_self");}
+            //   count--;
+            // }, 1000);
+            var test = window.location.href.split('#')[0];
+            console.log(test);
+          </script>
+          <?php } if(!isset($_GET['share'])){ ?>
+          <div class="d-flex flex-fill bg-white thanks-block text-center flex-column justify-content-center align-items-center">
+            <img src="assets/img/comman/thanks-icon.svg" class="thanks-icon">
+            <span class="thanks-title font-weight-bold text-capitalize">You're all set!</span>
+            <span class="thanks-subtitle font-weight-bold text-capitalize">Greetings From Shapoorji Vicinia</span>
+            <span class="thanks-msg">Thanks you for expressing interest on our website. <span class="d-md-block">Our expert will get in touch with you shortly.</span></span>
+            <a href="index.php" class="btn btn-light rounded-0 thanks-btn text-capitalize">&larr; Go back to Home</a>
+          </div>
+          <?php } if($thanksStutus == "brochure" OR $thanksStutus == "virtual" OR $thanksStutus == "floorplan"){ ?>
+          <div class="d-flex flex-fill bg-light info-block flex-column justify-content-center">
 
           <!-- Download Brochure =================== -->
           <?php if($thanksStutus == "brochure"){ ?>
-          <span class="d-block thanks-subtitle font-weight-bold text-capitalize mb-md-3 mb-2"><span class="mi mi-download nav-icon"></span> <span class="d-none d-md-inline">Shapoorji Vicinia</span> Brochure</span>
+          <span class="d-block thanks-subtitle font-weight-bold text-capitalize text-center mb-md-3 mb-2"><span class="mi mi-download nav-icon"></span> <span class="d-none d-md-inline">Shapoorji Vicinia</span> Brochure</span>
           <div class="text-center">
             <img src="assets/img/comman/thanks-brochure.svg" class="thanks-brochure-icon mt-2 mt-md-4">
             <span class="d-block thanks-subtitle font-weight-bold text-capitalize">Please Wait</span>
-            <span class="thanks-msg text-capitalize">Redirecting to brochure...</span>
+            <span class="thanks-msg text-capitalize">Redirecting to brochure in <span id="bro-count"></span> Seconds</span>
           </div>
-
+          <script>var count = 3; var countdown = setInterval(function(){
+              $("#bro-count").text(count);
+              if (count == 0){ clearInterval(countdown); window.open('brochure.pdf', "_self");}
+              count--;
+            }, 1000);
+          </script>
           <?php } ?>
           <!-- Download Brochure End =================== -->
 
@@ -90,8 +112,8 @@
           <span class="d-block thanks-subtitle font-weight-bold text-capitalize mb-md-3 mb-2"><span class="mi mi-siteplan nav-icon"></span> <span class="d-none d-md-inline">Shapoorji Vicinia</span> Unit Plan's</span>
 
           <div class="row owl-carousel owl-theme thanks-floor-plan lazyload"
-                data-script="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', './assets/plugins/fancybox/jquery.fancybox.min.js'); ?>"
-                data-link="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
+                data-script="<?= loadURL('', './assets/plugins/fancybox/jquery.fancybox.min.js'); ?>"
+                data-link="<?= loadURL('', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
 
             <div class="item col">
               <a data-fancybox="floorplan" thanks-lightbox href="assets/img/2bhk-768w.jpg" data-srcset="<?php loadImgLgURL("2bhk.jpg"); ?>">
@@ -184,9 +206,11 @@
         <?php lazyLoadJS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", "./assets/js/bootstrap.js"); ?>
         // Fonts =========================================================================================================
         $('head').append($('<link rel="stylesheet" type="text/css" crossorigin="anonymous" />').attr('href','<?= loadURL('https://fonts.googleapis.com/css?family=Muli|Roboto&display=swap', './assets/fonts/font.css'); ?>'));
+        $('head').append($('<link rel="stylesheet" type="text/css" crossorigin="anonymous" />').attr('href','./assets/fonts/icons.css'));
       });
     </script>
 
+    
 </body>
 
 </html>

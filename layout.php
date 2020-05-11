@@ -1,4 +1,4 @@
-<section class="section shadow-sm lazyload animated bounce" id="overview">
+<section class="section shadow-sm lazyload" id="overview">
 	<span class="head text-capitalize d-none d-md-block">Overview</span>
 
 	<span class="d-block section-heading color-primary text-capitalize">Shapoorji Vicinia</span>
@@ -16,7 +16,7 @@
 	<p>Legacy of 150 years of expertise in building residential, commercial and industrial structures Group Turnover of US$ 3 billion with over 35000 employees The first Indian construction company to enter the Middle East in the 1970s. List of architectural landmark include The Imperial – tallest residential tower in India, Mantri Pinnacle – tallest residential tower in South India, the palace of the Sultan of Oman among many others</p>
 </section>
 
-<section class="section shadow-sm lazyload animated bounce">
+<section class="section shadow-sm lazyload">
 	<span class="section-link" id="pricing"></span>
 	<span class="head text-capitalize">Price</span>
 	<div class="row">
@@ -34,19 +34,19 @@
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">2 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">671 - 888 sq.ft.</td>
-			      <td class="price-amt">₹&nbsp;1.75&nbsp;Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price&nbsp;Breakup</button></td>
+			      <td class="price-amt"><i class="mi mi-rs-light"></i> 1.75 Cr* Onwards</td>
+			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">3 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">1068 sq.ft.</td>
-			      <td class="price-amt">₹ 3.30 Cr* Onwards</td>
+			      <td class="price-amt"><i class="mi mi-rs-light"></i> 3.30 Cr* Onwards</td>
 			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">3.5 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">1645 sq.ft.</td>
-			      <td class="price-amt">₹ 5.40 Cr* Onwards</td>
+			      <td class="price-amt"><i class="mi mi-rs-light"></i> 5.40 Cr* Onwards</td>
 			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			  </tbody>
@@ -70,7 +70,7 @@
 </section>
 
 <section class="section shadow-sm lazyload"
-		 data-script="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', './assets/plugins/fancybox/jquery.fancybox.min.js'); ?>"
+		 data-script="./assets/plugins/fancybox/jquery.fancybox.min.js"
 		 data-link="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
 
 	<span class="section-link" id="sitefloorplan"></span>
@@ -134,7 +134,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm">
+<section class="section shadow-sm lazyload">
 	<span class="section-link" id="amenities"></span>
 	<span class="head text-capitalize">Amenities</span>
 	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -150,7 +150,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm">
+<section class="section shadow-sm lazyload">
 	<span class="section-link" id="gallery"></span>
 	<span class="head text-capitalize">Gallery</span>
 	<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -166,7 +166,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm" id="360view">
+<section class="section shadow-sm lazyload" id="360view">
 	<span class="head text-capitalize">360&deg; View</span>
 	<iframe frameborder="0"
 	class="lazyload d-video"
@@ -176,7 +176,7 @@
 </section>
 
 <section class="section shadow-sm lazyload"
-		 data-script="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js', './assets/plugins/fancybox/jquery.fancybox.min.js'); ?>"
+		 data-script="./assets/plugins/fancybox/jquery.fancybox.min.js"
 		 data-link="<?= loadURL('https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
 
 	<span class="section-link" id="location"></span>
@@ -236,7 +236,7 @@
 	</div>
 </section>
 
-<section class="section shadow-sm">
+<section class="section shadow-sm lazyload">
 	<span class="head text-capitalize">Virtual Site Tour</span>
 	<a href="#" class="enqModal" data-form="lg" data-title="Virtual Site Visit" data-btn="Start Tour" data-enquiry="Virtual Site Tour" data-redirect="virtualtour" data-toggle="modal" data-target="#enqModal">
 	<div class="at-property-item my-2 pt-md-0">
@@ -244,7 +244,7 @@
             <?php loadImgLg([ "src" => "testimg.jpg", "class" => "w-100", "style" => ""]); ?>
         	<div class="vsv-text-bk">
         		<div class="vsv-text-bg">
-        			<div class="vsv-icon"></div>
+        			<div class="vsv-icon lazyload"></div>
         			<span class="text-uppercase h1 font-weight-bold mb-0 d-none d-md-block">Virtual Tour</span>
         			<span class="text-capitalize text-center d-none d-md-block">Shapoorji Vicinia At Chandivali Powai, Mumbai</span>
         		</div>

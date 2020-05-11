@@ -11,7 +11,7 @@ Change Log:
 	- Font styles & font Size
 	- Section spacing
 	- Navigaton logo Size & spacing
-	- Animation
+	- Animations
 	- Hover Overlay Design
 	- Amenities, Gallery & Location Sections
 		- Tabs format
@@ -25,6 +25,7 @@ Change Log:
 	- Popup design
 	- Auto Popup override issue fixed
 	- User Inactive Enquiry Popup
+	- Removed right click, selection & copy text prevent 
 
 	==== Mobile Changes ====
 	- Open form
@@ -42,8 +43,10 @@ Change Log:
 	- Image Optimization
 		- Responsive
 		- Proressive
-		- WEBP/JPG/PNG/SVG
+		- WEBP/JPG/PNG
+	- Image Support (If WEBP not support browser then load JPG/PNG)
 	- Less HTML Dom Elements
+	- Minify CSS/JS
 	- Improved Lazy Load
 	- Load After Page CSS / JS (Non-Important)
 	- Web Fonts (WOFF/ WOFF2)

@@ -1,4 +1,4 @@
-<?php require "functions.php"; $amiStyle = 1; $galStyle = 1; $owlLoaded = false; ?>
+<?php require "functions.php"; $amiStyle = 2; $galStyle = 1; ?>
 <!doctype html>
 <html lang="en">
 
@@ -6,21 +6,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>New Template 2.0</title>
-    <?php loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css"); ?>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <?php 
+      loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css");
+
+      require_once "./assets/plugins/phpwee/minify-master/src/Minify.php"; 
+      require_once "./assets/plugins/phpwee/minify-master/src/CSS.php"; 
+      require_once "./assets/plugins/phpwee/minify-master/src/JS.php"; 
+      require_once "./assets/plugins/phpwee/minify-master/src/ConverterInterface.php"; 
+      require_once "./assets/plugins/phpwee/minify-master/src/Converter.php"; 
+      use MatthiasMullie\Minify;
+
+      $minifier = new Minify\CSS("./assets/css/style.css");
+      $minifier->add("./design/amenities/amenities-".$amiStyle.".css");
+      $minifier->add("./design/gallery/gallery-".$galStyle.".css");
+      $minifier->add("./assets/fonts/icons.css");
+      if($amiStyle == 2 || $amiStyle == 3 || $galStyle == 2 || $galStyle == 3){ $minifier->add("./assets/plugins/OwlCarousel/app.css"); }
+      $minifiedPath = './assets/css/style.min.css';
+      $minifier->minify($minifiedPath);
+    ?>
+    <link rel="stylesheet" href="./assets/css/style.min.css" />
 
     <!-- Plugins -->
     <?php if($amiStyle == 2 || $amiStyle == 3 || $galStyle == 2 || $galStyle == 3){ ?>
     <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css", "./assets/plugins/OwlCarousel/owl.carousel.css"); ?>
     <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css", "./assets/plugins/OwlCarousel/owl.theme.default.css"); ?>
-    <?php lazyLoadCSS("", "./assets/plugins/OwlCarousel/app.css"); ?>
-    <?php $owlLoaded = true; } ?>
-    <?php lazyLoadCSS("", "./assets/plugins/animate/animate.min.css"); ?>
-
-    <!-- Style -->
-    <?php lazyLoadCSS("", "./design/amenities/amenities-".$amiStyle.".css"); ?>
-    <?php lazyLoadCSS("", "./design/gallery/gallery-".$galStyle.".css"); ?>
-    
+    <?php } ?>
+    <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css", "./assets/plugins/animate/animate.min.css"); ?>
     <!-- Conversion Codes -->
 </head>
 
@@ -36,13 +47,13 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav nav-fill">
-              <li class="nav-item"><a class="nav-link" href="#home"><span class="mi mi-home nav-icon"></span><span class="d-sm-inline d-md-none"> Home</span></a></li>
-              <li class="nav-item"><a class="nav-link" href="#pricing"><span class="mi mi-price nav-icon"></span> Price</a></li>
-              <li class="nav-item"><a class="nav-link" href="#sitefloorplan"><span class="mi mi-siteplan nav-icon"></span> Site &amp; Floor Plan</a></li>
-              <li class="nav-item"><a class="nav-link" href="#amenities"><span class="mi mi-ami nav-icon"></span> Amenities</a></li>
-              <li class="nav-item"><a class="nav-link" href="#gallery"><span class="mi mi-gallery nav-icon"></span> Gallery</a></li>
-              <li class="nav-item"><a class="nav-link" href="#location"><span class="mi mi-location nav-icon"></span> Location</a></li>
-              <li class="nav-item"><a class="nav-link" href="#sitevisit"><span class="mi mi-sitevisit nav-icon"></span> Virtual Site Tour</a></li>
+              <li class="nav-item"><a class="nav-link" href="#home"><i class="mi mi-home nav-icon"></i><span class="d-sm-inline d-md-none"> Home</span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#pricing"><i class="mi mi-price nav-icon"></i> Price</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sitefloorplan"><i class="mi mi-siteplan nav-icon"></i> Site &amp; Floor Plan</a></li>
+              <li class="nav-item"><a class="nav-link" href="#amenities"><i class="mi mi-ami nav-icon"></i> Amenities</a></li>
+              <li class="nav-item"><a class="nav-link" href="#gallery"><i class="mi mi-gallery nav-icon"></i> Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="#location"><i class="mi mi-location nav-icon"></i> Location</a></li>
+              <li class="nav-item"><a class="nav-link" href="#sitevisit"><i class="mi mi-sitevisit nav-icon"></i> Virtual Site Tour</a></li>
               <li class="nav-item overflow-hidden"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><i class="mi mi-download nav-icon d-inline-block animated infinite bounce slow"></i> Brochure</a></li>
             </ul>
           </div>
@@ -55,12 +66,8 @@
           <li data-target="#home" data-slide-to="1"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <?php loadImgLg([ "src" => "testimg.jpg", "class" => "d-block micro-main-slider-img", "style" => ""]); ?>
-          </div>
-          <div class="carousel-item">
-            <?php loadImgLg([ "src" => "testimg2.jpg", "class" => "d-block micro-main-slider-img", "style" => ""]); ?>
-          </div>
+          <div class="carousel-item active"><?php loadImgLg([ "src" => "testimg.jpg", "class" => "d-block micro-main-slider-img", "style" => ""]); ?></div>
+          <div class="carousel-item"><?php loadImgLg([ "src" => "testimg2.jpg", "class" => "d-block micro-main-slider-img", "style" => ""]); ?></div>
         </div>
       </div>
       <div class="info-box">
@@ -74,7 +81,7 @@
           <li><span class="list-icon">&rtrif;</span> <span class="heading">Possession</span> : June 2020</li>
         </ul>
         <span class="pro-tag-line">Premium 2, 3 & 3.5 Bed Residences starting price</span>
-        <span class="pro-price">1.75 Cr* <small>Onwards</small></span>
+        <span class="pro-price"><i class="mi mi-rs-light info-icon"></i>1.75 Cr* <small>Onwards</small></span>
         <button class="btn btn-info micro-form-btn enqModal animated infinite tada slower delay-3s" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
         <span class="pro-rera"><span class="heading">RERA NO</span> : P51800002564</span>
       </div>
@@ -140,13 +147,9 @@
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/unveilhooks/ls.unveilhooks.min.js", "./assets/plugins/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js", "./assets/plugins/lazysizes/lazysizes.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js", "./assets/plugins/OwlCarousel/owl.carousel.js"); ?>
-    <?php loadJS("", "./assets/js/app.js"); ?>
-    
+
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
-        // Loader ========================================================================================================
-        document.getElementById("loader").remove();
-        // $("#loader").addClass("animated fadeOut");
         // Required JS ===================================================================================================
         <?php lazyLoadJS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", "./assets/js/bootstrap.js"); ?>
         // Fonts =========================================================================================================
@@ -154,6 +157,12 @@
       });
     </script>
 
+    <?php 
+      $minifierJS = new Minify\JS("./assets/js/app.js");
+      $minifiedJSPath = './assets/js/app.min.js';
+      $minifierJS->minify($minifiedJSPath);
+    ?>
+    <script type="text/javascript" src="assets/js/app.min.js"></script>
 </body>
 
 </html>
