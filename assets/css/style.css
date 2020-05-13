@@ -450,7 +450,7 @@ body {
 	.master-plan{
 		display: block;
 		max-width: 25vw;
-		max-height: 20vw;
+		height: 18.5vw;
 		margin: 0 auto;
 	}
 	.master-plan img{

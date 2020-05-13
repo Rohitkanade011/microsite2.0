@@ -10,28 +10,15 @@
 		return $httpCode;
 	}
 
-	function cssComparessor($fileLinks){
-		$buffer = "";
-        foreach ($fileLinks as $cssFile) {
-          $buffer .= file_get_contents($cssFile);
-        }
-        $buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
-        $buffer = str_replace(': ', ':', $buffer);
-        $buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
-        echo($buffer);
-	}
-
-
-
 	function loadURL($cdn, $local){
 		$httpCode = checkCDNStaus($cdn);
-		if($httpCode == 200){ $url = $cdn; }else{ $url = $local; }
+		if($httpCode == 200){ $url = $cdn; }else{ $url = $local."?".filemtime($local); }
 		return $url;
 	}
 
 	function loadURL_P($cdn, $local){
 		$httpCode = checkCDNStaus($cdn);
-		if($httpCode == 200){ $url = $cdn; }else{ $url = $local; }
+		if($httpCode == 200){ $url = $cdn; }else{ $url = $local."?".filemtime($local); }
 		echo $url;
 	}
 
@@ -40,7 +27,7 @@
 		if($httpCode >= 200 && $httpCode < 300){
 			echo '<link rel="preload" as="style" href="'. $cdn .'" onload="this.onload=null;this.rel=\'stylesheet\'" crossorigin="anonymous" /><noscript><link rel="stylesheet" href="'. $cdn .'"></noscript>';
 		}else{
-			echo '<link rel="preload" as="style" href="'. $local .'" onload="this.onload=null;this.rel=\'stylesheet\'" /><link rel="stylesheet" href="'. $local .'"></noscript>';
+			echo '<link rel="preload" as="style" href="'. $local .'?'. filemtime($local) .'" onload="this.onload=null;this.rel=\'stylesheet\'" /><link rel="stylesheet" href="'. $local .'?'. filemtime($local) .'"></noscript>';
 		}
 	}
 	
@@ -49,7 +36,7 @@
 		if($httpCode >= 200 && $httpCode < 300){
 			echo '<link rel="stylesheet" href="'. $cdn .'" crossorigin="anonymous" async />';
 		}else{
-			echo '<link rel="stylesheet" href="'. $local .'" async />';
+			echo '<link rel="stylesheet" href="'. $local .'?'. filemtime($local) .'" async />';
 		}
 	}
 
@@ -58,7 +45,7 @@
 		if($httpCode >= 200 && $httpCode < 300){
 			echo '<script src="'. $cdn .'" crossorigin="anonymous"></script>';
 		}else{
-			echo '<script src="'. $local .'"></script>';
+			echo '<script src="'. $local .'?'. filemtime($local) .'"></script>';
 		}
 	}
 
@@ -72,7 +59,7 @@
 		      document.getElementsByTagName("body")[0].appendChild(tag);';
 		}else{
 			echo 'var tag = document.createElement("script");
-		      tag.src = "'. $local .'";
+		      tag.src = "'. $local .'?'. filemtime($local) .'";
 		      tag.setAttribute("defer", "");
 		      document.getElementsByTagName("body")[0].appendChild(tag);';
 		}

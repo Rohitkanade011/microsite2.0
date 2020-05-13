@@ -45,9 +45,10 @@ Change Log:
 		- Proressive
 		- WEBP/JPG/PNG
 	- Image Support (If WEBP not support browser then load JPG/PNG)
-	- Less HTML Dom Elements
+	- Improved HTML Dom Elements
 	- Minify CSS/JS
 	- Improved Lazy Load
+	- Improved Catch Elements & Policy
 	- Load After Page CSS / JS (Non-Important)
 	- Web Fonts (WOFF/ WOFF2)
 	- Load CDN (If Available)

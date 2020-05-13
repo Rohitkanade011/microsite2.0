@@ -237,6 +237,7 @@
 </section>
 
 <section class="section shadow-sm lazyload">
+	<span class="section-link" id="sitevisit"></span>
 	<span class="head text-capitalize">Virtual Site Tour</span>
 	<a href="#" class="enqModal" data-form="lg" data-title="Virtual Site Visit" data-btn="Start Tour" data-enquiry="Virtual Site Tour" data-redirect="virtualtour" data-toggle="modal" data-target="#enqModal">
 	<div class="at-property-item my-2 pt-md-0">
@@ -254,5 +255,4 @@
 
     </div>
 	</a>
-	<span class="section-link" id="sitevisit"></span>
 </section>

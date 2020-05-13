@@ -1,4 +1,4 @@
-<?php require "functions.php"; $thanksStutus="floorplan"; ?>
+<?php require "functions.php"; $thanksStutus="floorplan"; $developmentMode = 0; ?>
 <!doctype html>
 <html lang="en">
 
@@ -6,17 +6,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>New Template 2.0</title>
-    <?php loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css"); ?>
-    <link rel="stylesheet" href="./assets/css/thanks.css" />
+    <?php 
+      loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css");
+      if($developmentMode == 1){ require "minify.php"; ThanksPageMinify(); }
+    ?>
 
     <!-- Plugins -->
     <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css", "./assets/plugins/OwlCarousel/owl.carousel.css"); ?>
     <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css", "./assets/plugins/OwlCarousel/owl.theme.default.css"); ?>
-    <?php lazyLoadCSS("", "./assets/plugins/OwlCarousel/app.css"); ?>
-    <?php lazyLoadCSS("", "./assets/plugins/animate/animate.min.css"); ?>
+    <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css", "./assets/plugins/animate/animate.min.css"); ?>
 
     <!-- Style -->
-    <?php lazyLoadCSS("", "./design/amenities/amenities-1.css"); ?>
+    <link rel="stylesheet" href="./assets/css/thanks.min.css?<?= filemtime('./assets/css/thanks.min.css'); ?>" />
     
     <!-- Conversion Codes -->
 </head>
@@ -206,10 +207,9 @@
         <?php lazyLoadJS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", "./assets/js/bootstrap.js"); ?>
         // Fonts =========================================================================================================
         $('head').append($('<link rel="stylesheet" type="text/css" crossorigin="anonymous" />').attr('href','<?= loadURL('https://fonts.googleapis.com/css?family=Muli|Roboto&display=swap', './assets/fonts/font.css'); ?>'));
-        $('head').append($('<link rel="stylesheet" type="text/css" crossorigin="anonymous" />').attr('href','./assets/fonts/icons.css'));
       });
     </script>
-
+    <script type="text/javascript" src="./assets/js/thanks.min.js?<?= filemtime('./assets/js/thanks.min.js'); ?>"></script>
     
 </body>
 
