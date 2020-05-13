@@ -1,10 +1,22 @@
-<?php require "functions.php"; $thanksStutus="floorplan"; $developmentMode = 0; ?>
+<?php require "functions.php"; $thanksStutus=""; $developmentMode = 0; ?>
 <!doctype html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <?php 
+      function styleInitCSS(){
+        echo '<style type="text/css">
+            :root {
+              --colorPrimary: #58B3EA;
+              --colorSecondary: #0D4CA8;
+              --colorBtn: #ffffff;
+            }
+          </style>';
+      } 
+      styleInitCSS();
+    ?>
     <title>New Template 2.0</title>
     <?php 
       loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css");
@@ -14,7 +26,6 @@
     <!-- Plugins -->
     <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css", "./assets/plugins/OwlCarousel/owl.carousel.css"); ?>
     <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css", "./assets/plugins/OwlCarousel/owl.theme.default.css"); ?>
-    <?php lazyLoadCSS("https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css", "./assets/plugins/animate/animate.min.css"); ?>
 
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/thanks.min.css?<?= filemtime('./assets/css/thanks.min.css'); ?>" />
@@ -41,7 +52,7 @@
               <li class="nav-item"><a class="nav-link" href="index.php#gallery"><span class="mi mi-gallery nav-icon"></span> Gallery</a></li>
               <li class="nav-item"><a class="nav-link" href="index.php#location"><span class="mi mi-location nav-icon"></span> Location</a></li>
               <li class="nav-item"><a class="nav-link" href="index.php#sitevisit"><span class="mi mi-sitevisit nav-icon"></span> Virtual Site Tour</a></li>
-              <li class="nav-item d-none d-md-inline-block"><a class="nav-link" href="tel:+919167757310"><span class="mi mi-call nav-icon d-inline-block animated infinite shakeX slow"></span> Call: +919167757310</a></li>
+              <li class="nav-item d-none d-md-inline-block"><a class="nav-link" href="tel:+919167757310"><span class="mi mi-call nav-icon d-inline-block"></span> Call: +919167757310</a></li>
               <li class="nav-item d-none d-md-inline-block"><a class="nav-link" href="https://api.whatsapp.com/send?phone=919167757370&text=test wahtasapp msg" target="_blank"><span class="mi mi-whatsapp nav-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> WhatsApp Now</a></li>
             </ul>
           </div>
@@ -55,17 +66,15 @@
             <img src="assets/img/comman/thanks-expire.svg" class="thanks-icon">
             <span class="thanks-title font-weight-bold text-capitalize text-danger">Oops!</span>
             <span class="thanks-subtitle font-weight-bold text-capitalize">Your Session is expired</span>
-            <span class="thanks-msg">You will redirecting <span id="count"></span> Seconds in to our Home Page</span>
+            <span class="thanks-msg">You will redirecting in <span id="count"></span> seconds to our Home Page</span>
             <a href="index.php" class="btn btn-light rounded-0 thanks-btn text-capitalize">&larr; Go back to Home</a>
           </div>
           <script>
-            // var count = 5; var countdown = setInterval(function(){
-            //   $("#count").text(count);
-            //   if (count == 0){ clearInterval(countdown); window.open('index.php', "_self");}
-            //   count--;
-            // }, 1000);
-            var test = window.location.href.split('#')[0];
-            console.log(test);
+            var count = 5; var countdown = setInterval(function(){
+              $("#count").text(count);
+              if (count == 0){ clearInterval(countdown); window.open('index.php', "_self");}
+              count--;
+            }, 1000);
           </script>
           <?php } if(!isset($_GET['share'])){ ?>
           <div class="d-flex flex-fill bg-white thanks-block text-center flex-column justify-content-center align-items-center">
@@ -124,7 +133,7 @@
                         <div class="at-property-overlayer"></div>
                         <span class="btn btn-default at-property-btn" role="button">View Plan</span>
                     </div>
-                    <div class="at-property-dis bg-info text-white">
+                    <div class="at-property-dis effetGradient">
                         <h5>2 BHK</h5>
                     </div>
                 </div>
@@ -138,7 +147,7 @@
                         <div class="at-property-overlayer"></div>
                         <span class="btn btn-default at-property-btn" role="button">View Plan</span>
                     </div>
-                    <div class="at-property-dis bg-info text-white">
+                    <div class="at-property-dis effetGradient">
                         <h5>2 BHK</h5>
                     </div>
                 </div>
@@ -152,7 +161,7 @@
                         <div class="at-property-overlayer"></div>
                         <span class="btn btn-default at-property-btn" role="button">View Plan</span>
                     </div>
-                    <div class="at-property-dis bg-info text-white">
+                    <div class="at-property-dis effetGradient">
                         <h5>2 BHK</h5>
                     </div>
                 </div>
@@ -166,7 +175,7 @@
                         <div class="at-property-overlayer"></div>
                         <span class="btn btn-default at-property-btn" role="button">View Plan</span>
                     </div>
-                    <div class="at-property-dis bg-info text-white">
+                    <div class="at-property-dis effetGradient">
                         <h5>2 BHK</h5>
                     </div>
                 </div>

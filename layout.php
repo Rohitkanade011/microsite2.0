@@ -8,7 +8,7 @@
 	<p>Bouquet of offerings including 2 & 3 BHK Premium and 3.5 BHK Luxury residences, Limited number of units per floor, Spacious Bedroom and living room designed to bring in ample sunlight and cross ventilation, Italian marble for living, dining and master bed room, Modular Kitchen (without kitchen appliances), Premium fixtures and fittings, Maid’s room with separate entrance, Video door phone with intercom facility</p>
 	<p>With easy accessibility to the Eastern and the Western suburbs of Mumbai and proximity to highways, hospitals, hotels, malls and schools save your precious time spent in commute. Come home to a place that makes life richer everyday</p>
 
-	<button class="btn btn-sm btn-outline-info sectio-bro-btn overflow-hidden enqModal" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><span class="d-inline-block mi mi-download mr-1 animated infinite bounce slow"></span> Download Brochure</button>
+	<button class="btn btn-sm btn-outline-info sectio-bro-btn overflow-hidden enqModal" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><span class="d-inline-block mi mi-download mr-1 animated slideInDown infinite"></span> Download Brochure</button>
 
 	<?php loadImg([ "src" => "Gateway-of-India_Mumbai.jpg", "class" => "w-100 my-2", "style" => ""]); ?>
 
@@ -35,19 +35,19 @@
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">2 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">671 - 888 sq.ft.</td>
 			      <td class="price-amt"><i class="mi mi-rs-light"></i> 1.75 Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info effetGradient enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">3 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">1068 sq.ft.</td>
 			      <td class="price-amt"><i class="mi mi-rs-light"></i> 3.30 Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info effetGradient enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">3.5 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">1645 sq.ft.</td>
 			      <td class="price-amt"><i class="mi mi-rs-light"></i> 5.40 Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info effetGradient enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -60,7 +60,7 @@
 	                <div class="at-property-overlayer"></div>
 	                <span class="btn btn-default at-property-btn">Equire Now</span>
 	            </div>
-	            <div class="at-property-dis bg-info text-white">
+	            <div class="at-property-dis effetGradient">
 	                <h5>Complete Costing Details</h5>
 	            </div>
 	        </div>
@@ -97,7 +97,7 @@
 	                <div class="at-property-overlayer"></div>
 	                <span class="btn btn-default at-property-btn" role="button">Equire Now</span>
 	            </div>
-	            <div class="at-property-dis bg-info text-white">
+	            <div class="at-property-dis effetGradient">
 	                <h5>2 BHK</h5>
 	            </div>
 	        </div>
@@ -111,7 +111,7 @@
 	                <div class="at-property-overlayer"></div>
 	                <span class="btn btn-default at-property-btn" role="button">Equire Now</span>
 	            </div>
-	            <div class="at-property-dis bg-info text-white">
+	            <div class="at-property-dis effetGradient">
 	                <h5>3 BHK</h5>
 	            </div>
 	        </div>
@@ -125,7 +125,7 @@
 	                <div class="at-property-overlayer"></div>
 	                <span class="btn btn-default at-property-btn" role="button">Equire Now</span>
 	            </div>
-	            <div class="at-property-dis bg-info text-white">
+	            <div class="at-property-dis effetGradient">
 	                <h5>3.5 BHK</h5>
 	            </div>
 	        </div>

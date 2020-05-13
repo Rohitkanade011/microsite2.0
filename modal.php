@@ -32,7 +32,7 @@
                 <textarea name="" col="5" class="form-control rounded-0 micro-form-field" placeholder="Comment"></textarea>
               </div>
               <input type="hidden" id="enquireName" value="Enquire Now">
-              <button type="submit" class="btn btn-info micro-form-btn">Get Instant Call Back</button>
+              <button type="submit" class="btn btn-info micro-form-btn effetGradient">Get Instant Call Back</button>
             </form>
           </div>
         </div>

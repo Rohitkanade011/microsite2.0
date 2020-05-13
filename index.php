@@ -1,10 +1,21 @@
-<?php require "functions.php"; $amiStyle = 1; $galStyle = 1; $developmentMode = 0; ?>
+<?php require "functions.php"; $amiStyle = 1; $galStyle = 1; $developmentMode = 1; ?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <?php 
+      function styleInitCSS(){
+        echo '<style type="text/css">
+            :root {
+              --colorPrimary: #58B3EA;
+              --colorSecondary: #0D4CA8;
+              --colorBtn: #ffffff;
+            }
+          </style>';
+      } 
+      styleInitCSS();
+    ?>
     <title>New Template 2.0</title>
     <?php 
       loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css");
@@ -12,8 +23,7 @@
       if($amiStyle == 2 || $amiStyle == 3 || $galStyle == 2 || $galStyle == 3){ 
         lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css", "./assets/plugins/OwlCarousel/owl.carousel.css");
         lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css", "./assets/plugins/OwlCarousel/owl.theme.default.css"); 
-      } 
-      lazyLoadCSS("https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css", "./assets/plugins/animate/animate.min.css");
+      }
     ?>
 
     <link rel="stylesheet" href="./assets/css/style.min.css?<?= filemtime('./assets/css/style.min.css'); ?>" />
@@ -39,7 +49,7 @@
               <li class="nav-item"><a class="nav-link" href="#gallery"><i class="mi mi-gallery nav-icon"></i> Gallery</a></li>
               <li class="nav-item"><a class="nav-link" href="#location"><i class="mi mi-location nav-icon"></i> Location</a></li>
               <li class="nav-item"><a class="nav-link" href="#sitevisit"><i class="mi mi-sitevisit nav-icon"></i> Virtual Site Tour</a></li>
-              <li class="nav-item overflow-hidden"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><i class="mi mi-download nav-icon d-inline-block animated infinite bounce slow"></i> Brochure</a></li>
+              <li class="nav-item overflow-hidden"><a class="nav-link enqModal" href="#" data-form="md" data-title="Dowbnload brochure" data-btn="Download now" data-enquiry="Ebook Download" data-redirect="brochure.pdf" data-toggle="modal" data-target="#enqModal"><i class="mi mi-download nav-icon d-inline-block animated slideInDown infinite"></i> Brochure</a></li>
             </ul>
           </div>
         </nav>
@@ -67,7 +77,7 @@
         </ul>
         <span class="pro-tag-line">Premium 2, 3 & 3.5 Bed Residences starting price</span>
         <span class="pro-price"><i class="mi mi-rs-light info-icon"></i>1.75 Cr* <small>Onwards</small></span>
-        <button class="btn btn-info micro-form-btn enqModal animated infinite tada slower delay-3s" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
+        <button class="btn btn-info micro-form-btn enqModal effetMoveGradient" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
         <span class="pro-rera"><span class="heading">RERA NO</span> : P51800002564</span>
       </div>
       <div class="mob-form d-sm-block d-md-none d-lg-none">
@@ -82,7 +92,7 @@
           <div class="form-group">
             <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
           </div>
-          <button type="submit" class="btn btn-info micro-form-btn" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
+          <button type="submit" class="btn btn-info micro-form-btn effetMoveGradient" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
         </form>
       </div>
       <?php require "layout.php"; ?>
@@ -93,7 +103,7 @@
             <li class="nav-item" onclick="window.open('https://api.whatsapp.com/send?phone=919167757370&text=test wahtasapp msg', '_blank');"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 919166757310</li>
           </ul>
           <p class="og-heading my-1 text-secondary">Or Request A</p>
-          <button class="btn btn-sm btn-info micro-form-btn-sm enqModal" data-form="sm" data-title="Immediate Call Back" data-btn="Request Call Now" data-enquiry="Immediate Call Back" data-toggle="modal" data-target="#enqModal"><span class="mi mi-call action-icon"></span> Call Back Now</button>
+          <button class="btn btn-sm btn-info micro-form-btn-sm effetGradient enqModal" data-form="sm" data-title="Immediate Call Back" data-btn="Request Call Now" data-enquiry="Immediate Call Back" data-toggle="modal" data-target="#enqModal"><span class="mi mi-call action-icon"></span> Call Back Now</button>
         </div>
 
         <span class="d-block form-heading font-weight-bold my-2">Pre-Register here for Best Offers</span>
@@ -107,7 +117,7 @@
           <div class="form-group">
             <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
           </div>
-          <button type="submit" class="btn btn-info micro-form-btn mt-2 animated infinite tada slower" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
+          <button type="submit" class="btn btn-info micro-form-btn mt-2 effetMoveGradient" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
         </form>
       </div>
       <ul class="mob-action nav nav-fill d-sm-block d-md-none d-lg-none">
