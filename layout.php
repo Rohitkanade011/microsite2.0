@@ -35,19 +35,19 @@
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">2 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">671 - 888 sq.ft.</td>
 			      <td class="price-amt"><i class="mi mi-rs-light"></i> 1.75 Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info effetGradient enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info effetGradient effectScale enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">3 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">1068 sq.ft.</td>
 			      <td class="price-amt"><i class="mi mi-rs-light"></i> 3.30 Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info effetGradient enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info effetGradient effectScale enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			    <tr>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-type">3.5 BHK</td>
 			      <td class="border border-left-0 border-top-0 border-bottom-0 price-carpet">1645 sq.ft.</td>
 			      <td class="price-amt"><i class="mi mi-rs-light"></i> 5.40 Cr* Onwards</td>
-			      <td><button class="btn btn-sm btn-info effetGradient enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
+			      <td><button class="btn btn-sm btn-info effetGradient effectScale enqModal" data-form="lg" data-title="Send me costing details" data-btn="Send now" data-enquiry="Request Price" data-redirect="floorplan" data-toggle="modal" data-target="#enqModal">Price Breakup</button></td>
 			    </tr>
 			  </tbody>
 			</table>
@@ -246,8 +246,8 @@
         	<div class="vsv-text-bk">
         		<div class="vsv-text-bg">
         			<div class="vsv-icon lazyload"></div>
-        			<span class="text-uppercase h1 font-weight-bold mb-0 d-none d-md-block">Virtual Tour</span>
-        			<span class="text-capitalize text-center d-none d-md-block">Shapoorji Vicinia At Chandivali Powai, Mumbai</span>
+        			<span class="text-uppercase h1 font-weight-bold mb-0 d-none d-lg-block">Virtual Tour</span>
+        			<span class="text-capitalize text-center d-none d-lg-block">Shapoorji Vicinia At Chandivali Powai, Mumbai</span>
         		</div>
         	</div>
         </div>

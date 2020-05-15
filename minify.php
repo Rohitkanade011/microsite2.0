@@ -8,7 +8,7 @@ require_once "./assets/plugins/phpwee/minify-master/src/Converter.php";
 use MatthiasMullie\Minify;
 
 function IndexPageMinify(){
-  $amiStyle = 2; $galStyle = 1;
+  $amiStyle = 1; $galStyle = 2;
   $minifier = new Minify\CSS("./assets/css/style.css");
   $minifier->add("./design/amenities/amenities-".$amiStyle.".css");
   $minifier->add("./design/gallery/gallery-".$galStyle.".css");

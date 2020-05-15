@@ -8,6 +8,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
    }, 3000);
 });
 
+// International Telephone Input
+$('form :input[name=mobile]').each(function () {
+  $(this).intlTelInput({
+    initialCountry: "auto",
+    preferredCountries: ["in"]
+  });
+});
+$(".intTelInput").keyup(function(){
+  var intTelInputId = $(this).attr("id");
+  var contryCode = $('#' + intTelInputId).intlTelInput('getSelectedCountryData').dialCode;
+  var mobileNo = $('#' + intTelInputId).val();
+  $(':input[name=fullMobileNo]').val('+' + contryCode + mobileNo);
+});
+
 // Navigation
 $('.navbar-nav>li>a').on('click', function(){
     $('.navbar-collapse').collapse('hide');

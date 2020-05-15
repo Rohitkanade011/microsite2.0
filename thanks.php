@@ -1,4 +1,4 @@
-<?php require "functions.php"; $thanksStutus=""; $developmentMode = 0; ?>
+<?php require "functions.php"; $thanksStutus="floorplan"; $developmentMode = 1; ?>
 <!doctype html>
 <html lang="en">
 
@@ -19,7 +19,7 @@
     ?>
     <title>New Template 2.0</title>
     <?php 
-      loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css");
+      loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css", "./assets/css/bootstrap.css");
       if($developmentMode == 1){ require "minify.php"; ThanksPageMinify(); }
     ?>
 
@@ -35,11 +35,11 @@
 
 <body data-spy="scroll" data-target="#navbarNav">
     
-    <div id="loader"><span class="loader-text"><img src="http://shapoorjivicinia.com/assets/img/Vicinialogo.svg" class="loader-logo"></span></div>
+    <div id="loader"><span class="loader-text"><img src="http://godrejs-exquisite.com/assets/img/logo12.png" class="loader-logo"></span></div>
 
     <header class="micro-nav fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-white micro-navbar">
-          <a class="navbar-brand" href="index.php" onclick="return false"><img src="http://shapoorjivicinia.com/assets/img/Vicinialogo.svg" class="logo"></a>
+          <a class="navbar-brand" href="index.php"><img src="http://godrejs-exquisite.com/assets/img/logo12.png" class="logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -126,7 +126,7 @@
                 data-link="<?= loadURL('', './assets/plugins/fancybox/jquery.fancybox.min.css'); ?>">
 
             <div class="item col">
-              <a data-fancybox="floorplan" thanks-lightbox href="assets/img/2bhk-768w.jpg" data-srcset="<?php loadImgLgURL("2bhk.jpg"); ?>">
+              <a data-fancybox="floorplan" thanks-lightbox href="assets/img/2bhk-768w.jpg" data-srcset="<?php loadImgLgURL("2bhk.jpg"); ?>" data-caption="2 BHK || 671 - 888 sq.ft. || Rs. 1.75 Cr* Onwards">
                 <div class="at-property-item shadow-sm border border-grey mt-1">
                     <div class="at-property-img">
                         <?php loadImgSm([ "src" => "2bhk.jpg", "class" => "floor-plan-img", "style" => ""]); ?>
@@ -140,7 +140,7 @@
               </a>
             </div>
             <div class="item col">
-              <a data-fancybox="floorplan" thanks-lightbox href="assets/img/3bhk-768w.jpg" data-srcset="<?php loadImgLgURL("3bhk.jpg"); ?>">
+              <a data-fancybox="floorplan" thanks-lightbox href="assets/img/3bhk-768w.jpg" data-srcset="<?php loadImgLgURL("3bhk.jpg"); ?>" data-caption="3 BHK || 900 sq.ft. || Rs. 2.10 Cr* Onwards">
                 <div class="at-property-item shadow-sm border border-grey mt-1">
                     <div class="at-property-img">
                         <?php loadImgSm([ "src" => "3bhk.jpg", "class" => "floor-plan-img", "style" => ""]); ?>
@@ -154,7 +154,7 @@
               </a>
             </div>
             <div class="item col">
-              <a data-fancybox="floorplan" thanks-lightbox href="assets/img/3.5bhk-768w.jpg" data-srcset="<?php loadImgLgURL("3.5bhk.jpg"); ?>">
+              <a data-fancybox="floorplan" thanks-lightbox href="assets/img/3.5bhk-768w.jpg" data-srcset="<?php loadImgLgURL("3.5bhk.jpg"); ?>" data-caption="3.5 BHK || 1050 - 1250 sq.ft. || Rs. 2.20 Cr* Onwards">
                 <div class="at-property-item shadow-sm border border-grey mt-1">
                     <div class="at-property-img">
                         <?php loadImgSm([ "src" => "3.5bhk.jpg", "class" => "floor-plan-img", "style" => ""]); ?>
@@ -168,7 +168,7 @@
               </a>
             </div>
             <div class="item col">
-              <a data-fancybox="floorplan" thanks-lightbox href="assets/img/3.5bhk-768w.jpg" data-srcset="<?php loadImgLgURL("3.5bhk.jpg"); ?>">
+              <a data-fancybox="floorplan" thanks-lightbox href="assets/img/3.5bhk-768w.jpg" data-srcset="<?php loadImgLgURL("3.5bhk.jpg"); ?>" data-caption="4 BHK || 1500 sq.ft. || Rs. 2.95 Cr* Onwards">
                 <div class="at-property-item shadow-sm border border-grey mt-1">
                     <div class="at-property-img">
                         <?php loadImgSm([ "src" => "3.5bhk.jpg", "class" => "floor-plan-img", "style" => ""]); ?>
@@ -213,13 +213,14 @@
         document.getElementById("loader").remove();
         // $("#loader").addClass("animated fadeOut");
         // Required JS ===================================================================================================
-        <?php lazyLoadJS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", "./assets/js/bootstrap.js"); ?>
+        <?php lazyLoadJS("https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js", "./assets/js/bootstrap.js"); ?>
         // Fonts =========================================================================================================
         $('head').append($('<link rel="stylesheet" type="text/css" crossorigin="anonymous" />').attr('href','<?= loadURL('https://fonts.googleapis.com/css?family=Muli|Roboto&display=swap', './assets/fonts/font.css'); ?>'));
       });
     </script>
     <script type="text/javascript" src="./assets/js/thanks.min.js?<?= filemtime('./assets/js/thanks.min.js'); ?>"></script>
-    
+
+    <?php if($developmentMode == 1) { require "./assets/plugins/dev/development.html"; } ?>
 </body>
 
 </html>

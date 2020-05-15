@@ -1,4 +1,4 @@
-<?php require "functions.php"; $amiStyle = 1; $galStyle = 1; $developmentMode = 1; ?>
+<?php require "functions.php"; $amiStyle = 1; $galStyle = 2; $developmentMode = 1; ?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -18,25 +18,24 @@
     ?>
     <title>New Template 2.0</title>
     <?php 
-      loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css", "./assets/css/bootstrap.css");
+      loadCSS("https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css", "./assets/css/bootstrap.css");
       if($developmentMode == 1){ require "minify.php"; IndexPageMinify(); }
       if($amiStyle == 2 || $amiStyle == 3 || $galStyle == 2 || $galStyle == 3){ 
         lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css", "./assets/plugins/OwlCarousel/owl.carousel.css");
         lazyLoadCSS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css", "./assets/plugins/OwlCarousel/owl.theme.default.css"); 
       }
     ?>
-
     <link rel="stylesheet" href="./assets/css/style.min.css?<?= filemtime('./assets/css/style.min.css'); ?>" />
     <!-- Conversion Codes -->
 </head>
 
 <body data-spy="scroll" data-target="#navbarNav">
     
-    <div id="loader"><span class="loader-text"><img src="http://shapoorjivicinia.com/assets/img/Vicinialogo.svg" class="loader-logo"></span></div>
+    <div id="loader"><span class="loader-text"><img src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img/http://godrejs-nirvaan.com/wp-content/uploads/2020/02/logo-n-1.png" class="loader-logo"></span></div>
 
     <header class="micro-nav fixed-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-white micro-navbar">
-          <a class="navbar-brand" href="#" onclick="return false"><img src="http://shapoorjivicinia.com/assets/img/Vicinialogo.svg" class="logo"></a>
+          <a class="navbar-brand" href="#" onclick="return false"><img src="https://cdn.shortpixel.ai/client/to_webp,q_glossy,ret_img/http://godrejs-nirvaan.com/wp-content/uploads/2020/02/logo-n-1.png" class="logo"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -77,7 +76,7 @@
         </ul>
         <span class="pro-tag-line">Premium 2, 3 & 3.5 Bed Residences starting price</span>
         <span class="pro-price"><i class="mi mi-rs-light info-icon"></i>1.75 Cr* <small>Onwards</small></span>
-        <button class="btn btn-info micro-form-btn enqModal effetMoveGradient" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
+        <button class="btn btn-info micro-form-btn enqModal effetMoveGradient effectScale" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal">Enquire Now</button>
         <span class="pro-rera"><span class="heading">RERA NO</span> : P51800002564</span>
       </div>
       <div class="mob-form d-sm-block d-md-none d-lg-none">
@@ -87,7 +86,8 @@
             <input type="text" pattern="[a-zA-Z ]+" class="form-control rounded-0 micro-form-field" required placeholder="Name">
           </div>
           <div class="form-group">
-            <input type="text" pattern="[0-9]+" class="form-control rounded-0 micro-form-field" required placeholder="Mobile No">
+            <input type="hidden" name="fullMobileNo" value="">
+            <input type="tel" id="intTelInput-mob" pattern="[0-9]+" name="mobile" class="intTelInput form-control rounded-0 micro-form-field" required placeholder="Mobile No">
           </div>
           <div class="form-group">
             <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
@@ -103,24 +103,25 @@
             <li class="nav-item" onclick="window.open('https://api.whatsapp.com/send?phone=919167757370&text=test wahtasapp msg', '_blank');"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> 919166757310</li>
           </ul>
           <p class="og-heading my-1 text-secondary">Or Request A</p>
-          <button class="btn btn-sm btn-info micro-form-btn-sm effetGradient enqModal" data-form="sm" data-title="Immediate Call Back" data-btn="Request Call Now" data-enquiry="Immediate Call Back" data-toggle="modal" data-target="#enqModal"><span class="mi mi-call action-icon"></span> Call Back Now</button>
+          <button class="btn btn-sm btn-info micro-form-btn-sm effetGradient effectScale enqModal" data-form="sm" data-title="Immediate Call Back" data-btn="Request Call Now" data-enquiry="Immediate Call Back" data-toggle="modal" data-target="#enqModal"><span class="mi mi-call action-icon"></span> Call Back Now</button>
         </div>
 
         <span class="d-block form-heading font-weight-bold my-2">Pre-Register here for Best Offers</span>
         <form action="" method="POST" class="form-side">
           <div class="form-group">
-            <input type="text" pattern="[a-zA-Z ]+" class="form-control rounded-0 micro-form-field" required placeholder="Name">
+            <input type="text" name="name" pattern="[a-zA-Z ]+" class="form-control rounded-0 micro-form-field" placeholder="Name" required />
           </div>
           <div class="form-group">
-            <input type="text" pattern="[0-9]+" class="form-control rounded-0 micro-form-field" required placeholder="Mobile No">
+            <input type="hidden" name="fullMobileNo" value="">
+            <input type="tel" id="intTelInput-side" pattern="[0-9]+" name="mobile" class="intTelInput form-control rounded-0 micro-form-field w-100" placeholder="Mobile No" required />
           </div>
           <div class="form-group">
-            <input type="text" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" required placeholder="E-Mail Address">
+            <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control rounded-0 micro-form-field" placeholder="E-Mail Address" required />
           </div>
-          <button type="submit" class="btn btn-info micro-form-btn mt-2 effetMoveGradient" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
+          <button type="submit" name="formBtn" class="btn btn-info micro-form-btn mt-2 effetMoveGradient" onclick="setCookie('redirectCookie', 'enquire');">Pre-Register Now</button>
         </form>
       </div>
-      <ul class="mob-action nav nav-fill d-sm-block d-md-none d-lg-none">
+      <ul class="mob-action nav nav-fill d-sm-block d-lg-none">
         <li class="nav-item" onclick="javascript:location.href='tel:+919167757310'"><span class="mi mi-call action-icon"></span> Call</li>
         <li class="nav-item enqModal" data-form="lg" data-title="Mail me pricing details" data-btn="Send now" data-enquiry="Enquire Now" data-redirect="enquiry" data-toggle="modal" data-target="#enqModal"><span class="mi mi-enquire action-icon"></span> Enquire</li>
         <li class="nav-item" onclick="window.open('https://api.whatsapp.com/send?phone=919167757370&text=test wahtasapp msg', '_blank');"><span class="mi mi-whatsapp action-icon"><span class="path1"></span><span class="path2"></span><span class="path3"></span></span> WhatsApp</li>
@@ -130,11 +131,12 @@
        <b>Disclaimer :</b> The content is for information purposes only and does not constitute an offer to avail of any service. Prices mentioned are subject to change without notice and properties mentioned are subject to availability. Images for representation purposes only. This is the official website of authorized marketing partner (PropertyPistol Real Estate Brokers L.L.C.). We may send updates to the mobile number/email id registered with us. All Rights Reserved.
     </footer>
 
+
     <!-- Modal -->
     <?php require "modal.php"; ?>
 
     <!-- Required JS -->
-    <?php loadJS("https://code.jquery.com/jquery-3.4.1.slim.min.js", "./assets/js/jquery.js"); ?>
+    <?php loadJS("https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js", "./assets/js/jquery.js"); ?>
     <!-- Plugins -->
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/object-fit/ls.object-fit.min.js", "./assets/plugins/lazysizes/plugins/object-fit/ls.object-fit.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/parent-fit/ls.parent-fit.min.js", "./assets/plugins/lazysizes/plugins/parent-fit/ls.parent-fit.min.js"); ?>
@@ -142,16 +144,20 @@
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/plugins/unveilhooks/ls.unveilhooks.min.js", "./assets/plugins/lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/lazysizes@5.2.0/lazysizes.min.js", "./assets/plugins/lazysizes/lazysizes.min.js"); ?>
     <?php loadJS("https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js", "./assets/plugins/OwlCarousel/owl.carousel.js"); ?>
+    <?php loadJS("https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.0/build/js/intlTelInput-jquery.min.js", "./assets/plugins/intTelInput/intlTelInput-jquery.min.js"); ?>
 
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function(event) { 
         // Required JS ===================================================================================================
-        <?php lazyLoadJS("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js", "./assets/js/bootstrap.js"); ?>
+        <?php lazyLoadJS("https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js", "./assets/js/bootstrap.js"); ?>
         // Fonts =========================================================================================================
-        $('head').append($('<link rel="stylesheet" type="text/css" crossorigin="anonymous" />').attr('href','<?= loadURL('https://fonts.googleapis.com/css?family=Muli|Roboto&display=swap', './assets/fonts/font.css'); ?>'));
+        $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href','<?= loadURL('https://fonts.googleapis.com/css?family=Muli|Roboto&display=swap', './assets/fonts/font.css'); ?>'));
+        $('head').append($('<link rel="stylesheet" type="text/css" />').attr('href','<?= loadURL('https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.0/build/css/intlTelInput.min.css', './assets/plugins/intTelInput/intlTelInput.min.css'); ?>'));
       });
     </script>
     <script type="text/javascript" src="./assets/js/app.min.js?<?= filemtime('./assets/js/app.min.js'); ?>"></script>
+
+    <?php if($developmentMode == 1) { require "./assets/plugins/dev/development.html"; } ?>
 </body>
 
 </html>

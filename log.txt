@@ -11,7 +11,6 @@ Change Log:
 	- Font styles & font Size
 	- Section spacing
 	- Navigaton logo Size & spacing
-	- Animations
 	- Hover Overlay Design
 	- Amenities, Gallery & Location Sections
 		- Tabs format
@@ -22,6 +21,7 @@ Change Log:
 		- Share Option
 	- Dynamic Virtual Tour
 	- Disclaimer spacing anf font size issue fixed
+	- Auto Contry Mobile Extention Detection
 	- Popup design
 	- Auto Popup override issue fixed
 	- User Inactive Enquiry Popup
@@ -52,10 +52,11 @@ Change Log:
 	- Load After Page CSS / JS (Non-Important)
 	- Web Fonts (WOFF/ WOFF2)
 	- Load CDN (If Available)
-	- Custom SVG Icon Sets
+	- Custom SVG Icon Sets (Removed 3rd party icons set)
 
 
 - Development Log
+	- Development Environment
 	- Data file format
 	- Image Structure
 	- Default file format

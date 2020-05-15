@@ -215,8 +215,8 @@ body {
 		letter-spacing: .02vw;
 	}
 	.logo{
-		max-width: 14vw;
-		height: 3.9vw;
+		max-width: 18vw;
+		max-height: 3.9vw;
 	}
 	.navbar-brand{
 		padding: 0 0.2rem;
@@ -562,7 +562,7 @@ body {
 	.modal-logo{
 		margin-top: 1vw;
 		max-height: 5vw;
-		max-width: 90%;
+		max-width: 275px;
 	}
 	.close{
 		position: absolute;
@@ -631,20 +631,21 @@ body {
 	}
 }
 
+
 @media only screen and (max-width: 991px) {
 	.navbar.micro-navbar{
 		padding: 0.1rem 0;
 	}
 	.navbar.micro-navbar .navbar-brand{
 		padding: 0;
-		margin-left: 0.5rem;
+		margin-left: 0.2rem;
 	}
 	.navbar-toggler{
-		margin-right: 0.5rem;
+		margin: 0.7rem 0.5rem 0.7rem 0;
 	}
 	.logo{
-		height: 60px;
-    	max-width: 250px;
+		max-height: 60px;
+    	max-width: 275px;
 	}
 	.micro-side{
 		display: none
@@ -654,7 +655,7 @@ body {
 		margin-top: 65px;
 	}
 	.micro-main-slider-img{
-		height: 250px;
+		min-height: 250px;
 	}
 	.micro-main-slider-img-full{
 		height: 92vh;
@@ -825,7 +826,7 @@ body {
 	}
 	.d-video{
 		width: 100%;
-		height: auto;
+		min-height: 250px;
 	}
 	.lmap{
 		width: 100%;
@@ -876,8 +877,8 @@ body {
 		padding: 10px 0;
 		text-align: center;
 		font-size: 14px;
-		width: 33%;
-		display: flex;
+		width: 32%;
+		display: inline-flex;
 	    flex-direction: row;
 	    align-items: center;
 	    justify-content: center;
@@ -942,8 +943,9 @@ body {
 	}
 
 	.modal-logo{
-		margin-top: 15px;
-		height: 60px;
+		margin-top: 20px;
+		max-height: 60px;
+		max-width: 90%;
 	}
 	.close{
 		position: absolute;
@@ -987,6 +989,11 @@ body {
 }
 
 
+@media only screen and (max-width: 320px) {
+	.logo{
+		max-width: 235px 
+	}
+}
 
 /* Lazy Img CSS */
 img.lazyload {
@@ -1076,6 +1083,31 @@ img.lazyload:not([src]) {
     border: none;
 }
 
+.effectScale{
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+	-webkit-transform: scale(1);
+	   -moz-transform: scale(1);
+	    -ms-transform: scale(1);
+	     -o-transform: scale(1);
+	        transform: scale(1);
+}
+.effectScale:hover{
+	-webkit-transition: all .3s ease;
+	   -moz-transition: all .3s ease;
+	    -ms-transition: all .3s ease;
+	     -o-transition: all .3s ease;
+	        transition: all .3s ease;
+	-webkit-transform: scale(1.08);
+	   -moz-transform: scale(1.08);
+	    -ms-transform: scale(1.08);
+	     -o-transform: scale(1.08);
+	        transform: scale(1.08);
+}
+
 .sectio-bro-btn {
     background-color: transparent;
     color: var(--colorPrimary);
@@ -1145,4 +1177,9 @@ img.lazyload:not([src]) {
 .slideInDown {
  -webkit-animation-name: slideInDown;
  animation-name: slideInDown;
+}
+
+/* 3rd Party CSS Fixes */
+.iti{
+	display: block !important;
 }

@@ -215,33 +215,36 @@
   }
   .ami-container{
     padding: 1.2vw .8vw .8vw;
+    height: 11vw;
   }
   .ami-img{
-    height: 6vw !important;
-    display: inline-block;
+    height: 4vw;
+    display: block;
     margin: 0 auto .8vw;
   }
   .ami-title{
-    font-size: 1.1vw;
+    font-size: 1vw;
+    display: block;
   }
   
 }
 
 @media only screen and (max-width: 991px) {
   .ami-block{
-    margin: 10px 10%;
-    width: 80%;
+    width: 100%;
+    margin: 10px 0;
   }
   .ami-container{
     padding: 10px;
+    height: 150px;
   }
   .ami-img{
-    height: 100px !important;
-    width: auto !important;
+    height: 55px;
+    width: auto;
     display: inline-block;
-    margin: 0 auto 20px;
+    margin: 0 auto 10px;
   }
   .ami-title{
-    font-size: 20px;
+    font-size: 16px;
   }
 }
