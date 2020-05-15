@@ -995,6 +995,31 @@ body {
 	}
 }
 
+@media only screen and (min-width: 1600px) {
+	.micro-nav{
+		width: 80%;
+	}
+	.micro-side{
+		width: 20%
+	}
+	.micro-main-slider{
+		width: 80%
+	}
+	.micro-main-slider .carousel-item img{
+		width: 100%;
+		height: 100%
+	}
+	.section{
+		max-width: 79%;
+	}
+	.d-video{
+		height: 450px;
+	}
+	.vsv-img{
+		height: auto;
+	}
+}
+
 /* Lazy Img CSS */
 img.lazyload {
 	font-family: "blur-up: auto", "object-fit: cover";
